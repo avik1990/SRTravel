@@ -4,10 +4,10 @@
     <data>
         <variable
             name="navigationItem"
-            type="com.app.srtravels.home.module.model.BannerModel" />
+            type="com.app.srtravels.slider.model.BannerModel" />
         <variable
             name="clickEvent"
-            type="com.app.srtravels.home.module.adapter.SliderAdapter.Interaction"/>
+            type="com.app.srtravels.slider.adapter.SliderAdapter.Interaction"/>
         <variable
             name="position"
             type="Integer" />

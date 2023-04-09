@@ -1,4 +1,4 @@
-package com.app.srtravels.home.module.adapter
+package com.app.srtravels.home.modules.trip.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,31 +6,31 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import coil.size.Scale
-
 import com.app.srtravels.R
-import com.app.srtravels.databinding.RowAllViewpagerBinding
-import com.app.srtravels.home.module.model.BannerModel
+import com.app.srtravels.databinding.RowMovielistHeaderBinding
+import com.app.srtravels.home.modules.trip.model.Trip
+import com.app.srtravels.home.modules.trip.model.Tripcategory
 
-class SliderAdapter(private val context: Context, private val interaction: Interaction) :
-    RecyclerView.Adapter<SliderAdapter.NavigationOptionViewHolder>() {
+class TripCategoryAdapter (private val context: Context, private val interaction: Interaction) :
+    RecyclerView.Adapter<TripCategoryAdapter.NavigationOptionViewHolder>(), TripAdapter.Interaction {
 
     var currentItemSelected: Int = 0
+    private val viewPool = RecyclerView.RecycledViewPool()
 
-    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<BannerModel>() {
+    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Tripcategory>() {
 
         override fun areItemsTheSame(
-            oldItem: BannerModel,
-            newItem: BannerModel
+            oldItem: Tripcategory,
+            newItem: Tripcategory
         ): Boolean {
             return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(
-            oldItem: BannerModel,
-            newItem: BannerModel
+            oldItem: Tripcategory,
+            newItem: Tripcategory
         ): Boolean {
             return oldItem.equals(newItem)
         }
@@ -42,17 +42,17 @@ class SliderAdapter(private val context: Context, private val interaction: Inter
      * Interface for any kind of listener event in recyclerView
      * */
     interface Interaction {
-        fun onItemSelected(position: Int, item: BannerModel)
+        fun onItemSelectedHorizontal(position: Int, item: Trip)
     }
 
     class NavigationOptionViewHolder(
-        val itemDataBindingUtil: RowAllViewpagerBinding,
+        val itemDataBindingUtil: RowMovielistHeaderBinding,
         val interaction: Interaction
     ) :
         RecyclerView.ViewHolder(itemDataBindingUtil.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NavigationOptionViewHolder {
-        val itemDatabinding = DataBindingUtil.inflate<RowAllViewpagerBinding>(LayoutInflater.from(parent.context), R.layout.row_all_viewpager, parent, false)
+        val itemDatabinding = DataBindingUtil.inflate<RowMovielistHeaderBinding>(LayoutInflater.from(parent.context), R.layout.row_movielist_header, parent, false)
         return NavigationOptionViewHolder(
             itemDatabinding,
             interaction
@@ -63,30 +63,28 @@ class SliderAdapter(private val context: Context, private val interaction: Inter
         return differ.currentList.size
     }
 
-    fun submitList(list: List<BannerModel>) {
+    fun submitList(list: List<Tripcategory>) {
         differ.submitList(list)
     }
 
     override fun onBindViewHolder(holder: NavigationOptionViewHolder, position: Int) {
         val item = differ.currentList[position]
-        /**
-         * Assigning the variables in to data binding variables for showing the data
-         * */
+
         holder.itemDataBindingUtil.navigationItem = item
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
         holder.itemDataBindingUtil.checked = (currentItemSelected == position)
-        //val url = "https://www.themoviedb.org/t/p/w500" + item?.poster_path
-       // Log.e("poster_path", url)
-       /* Glide.with(context)
-            .load(url)
-            .into(holder.itemDataBindingUtil.imgBanner!!)*/
-        holder.itemDataBindingUtil.imgBanner.load(item?.imgURl) {
-            // crossfade(750)
-            // placeholder(errorPlaceHolder)
-            // transformations(CircleCropTransformation())
-            // error(errorPlaceHolder)
-            scale(Scale.FILL)
+
+        holder.itemDataBindingUtil.listSubCatItem.apply {
+            layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.listSubCatItem.context, LinearLayoutManager.HORIZONTAL, false)
+            adapter = TripAdapter(item.trips, this@TripCategoryAdapter)
+            holder.itemDataBindingUtil.listSubCatItem.setRecycledViewPool(viewPool)
         }
+    }
+
+
+
+    override fun onChildItemSelected(position: Int, item: Trip) {
+        interaction.onItemSelectedHorizontal(position, item)
     }
 }

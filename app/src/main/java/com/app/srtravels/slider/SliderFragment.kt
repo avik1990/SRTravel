@@ -1,29 +1,23 @@
-package com.app.srtravels.home.module
+package com.app.srtravels.slider
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.PagerAdapter
-import com.app.srtravels.R
-import com.app.srtravels.databinding.FragmentHomeBinding
 import com.app.srtravels.databinding.FragmentSliderBinding
-import com.app.srtravels.home.module.adapter.SliderAdapter
-import com.app.srtravels.home.module.model.BannerModel
-import dagger.hilt.android.AndroidEntryPoint
+import com.app.srtravels.slider.adapter.SliderAdapter
+import com.app.srtravels.slider.model.BannerModel
 import java.util.Timer
 import java.util.TimerTask
 
 
-class SliderFragment : Fragment(),SliderAdapter.Interaction {
+class SliderFragment : Fragment(), SliderAdapter.Interaction {
 
     companion object {
         fun newInstance() = SliderFragment()
@@ -55,10 +49,9 @@ class SliderFragment : Fragment(),SliderAdapter.Interaction {
         adapter = SliderAdapter(requireContext(), this)
         _binding.bannerSlider.adapter = adapter
         _binding.bannerSlider.layoutManager = linearLayoutManager
-        //PagerSnapHelper().attachToRecyclerView(_binding.bannerSlider)
         adapter.submitList(viewModel.getSLiderImages())
         adapter.notifyDataSetChanged()
-        LinearSnapHelper().attachToRecyclerView(_binding.bannerSlider)
+        PagerSnapHelper().attachToRecyclerView(_binding.bannerSlider)
 
         Timer().schedule(object : TimerTask() {
             override fun run() {
@@ -67,7 +60,7 @@ class SliderFragment : Fragment(),SliderAdapter.Interaction {
                         linearLayoutManager.findLastCompletelyVisibleItemPosition() + 1)
                 }else if(linearLayoutManager.findLastCompletelyVisibleItemPosition() == (adapter.itemCount -1)){
                     linearLayoutManager.smoothScrollToPosition(_binding.bannerSlider,RecyclerView.State(),
-                        0)
+                        linearLayoutManager.findLastCompletelyVisibleItemPosition() - 1)
                 }
             }
         }, 0,5000)

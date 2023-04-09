@@ -14,7 +14,7 @@ import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import com.app.srtravels.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -42,13 +42,11 @@ class MainActivity : AppCompatActivity() {
         navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
 
         setNavigationGraph()
-
     }
 
     private fun setNavigationGraph() {
         navGraph.setStartDestination(R.id.loginFragment)
         navController.graph = navGraph
     }
-
 
 }

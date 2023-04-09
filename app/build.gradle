@@ -117,5 +117,7 @@ dependencies {
     //
     //stepper library
     implementation "com.tbuonomo:dotsindicator:4.3"
-    //
+    //rounded corner image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
 }

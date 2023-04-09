@@ -1,7 +1,7 @@
-package com.app.srtravels.home.module
+package com.app.srtravels.slider
 
 import androidx.lifecycle.ViewModel
-import com.app.srtravels.home.module.model.BannerModel
+import com.app.srtravels.slider.model.BannerModel
 
 class SliderViewModel : ViewModel() {
 
