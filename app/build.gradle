@@ -39,6 +39,10 @@ android {
         viewBinding true
         dataBinding = true
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 ktlint {
@@ -113,5 +117,5 @@ dependencies {
     //
     //stepper library
     implementation "com.tbuonomo:dotsindicator:4.3"
-
+    //
 }

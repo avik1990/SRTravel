@@ -1,0 +1,37 @@
+package com.app.srtravels.home
+
+import androidx.lifecycle.ViewModelProvider
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.app.srtravels.R
+import com.app.srtravels.databinding.FragmentHomeBinding
+import com.app.srtravels.databinding.FragmentRegisterBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+
+class HomeFragment : Fragment() {
+
+    companion object {
+        fun newInstance() = HomeFragment()
+    }
+
+    private lateinit var viewModel: HomeViewModel
+    private lateinit var _binding: FragmentHomeBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return _binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+    }
+
+}

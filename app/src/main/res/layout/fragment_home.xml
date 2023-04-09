@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment">
+
+   <androidx.fragment.app.FragmentContainerView
+       android:id="@+id/fragment_container_view_tag"
+       android:layout_width="match_parent"
+       android:name="com.app.srtravels.home.module.SliderFragment"
+       android:layout_height="@dimen/_200sdp"/>
+
+</FrameLayout>

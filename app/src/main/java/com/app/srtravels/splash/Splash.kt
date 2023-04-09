@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.app.srtravels.MainActivity
 import com.app.srtravels.R
 import com.app.srtravels.onboarding.feature.onboarding.OnBoardingActivity
 
@@ -18,7 +17,6 @@ class Splash : AppCompatActivity() {
             val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
-
+        }, 2000)
     }
 }
