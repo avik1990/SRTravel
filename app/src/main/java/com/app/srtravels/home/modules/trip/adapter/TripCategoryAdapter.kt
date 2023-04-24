@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
-import com.app.srtravels.databinding.RowMovielistHeaderBinding
+import com.app.srtravels.databinding.RowTripHeaderBinding
 import com.app.srtravels.home.modules.trip.model.Trip
 import com.app.srtravels.home.modules.trip.model.Tripcategory
 
-class TripCategoryAdapter (private val context: Context, private val interaction: Interaction) :
+class TripCategoryAdapter(private val context: Context, private val interaction: Interaction) :
     RecyclerView.Adapter<TripCategoryAdapter.NavigationOptionViewHolder>(), TripAdapter.Interaction {
 
     var currentItemSelected: Int = 0
@@ -46,13 +46,13 @@ class TripCategoryAdapter (private val context: Context, private val interaction
     }
 
     class NavigationOptionViewHolder(
-        val itemDataBindingUtil: RowMovielistHeaderBinding,
+        val itemDataBindingUtil: RowTripHeaderBinding,
         val interaction: Interaction
     ) :
         RecyclerView.ViewHolder(itemDataBindingUtil.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NavigationOptionViewHolder {
-        val itemDatabinding = DataBindingUtil.inflate<RowMovielistHeaderBinding>(LayoutInflater.from(parent.context), R.layout.row_movielist_header, parent, false)
+        val itemDatabinding = DataBindingUtil.inflate<RowTripHeaderBinding>(LayoutInflater.from(parent.context), R.layout.row_trip_header, parent, false)
         return NavigationOptionViewHolder(
             itemDatabinding,
             interaction
@@ -81,8 +81,6 @@ class TripCategoryAdapter (private val context: Context, private val interaction
             holder.itemDataBindingUtil.listSubCatItem.setRecycledViewPool(viewPool)
         }
     }
-
-
 
     override fun onChildItemSelected(position: Int, item: Trip) {
         interaction.onItemSelectedHorizontal(position, item)

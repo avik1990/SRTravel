@@ -55,6 +55,7 @@
     <string name="login_password_hint">Password</string>
     <string name="already_nhave_an_naccount">Already \nhave an \nAccount?</string>
     <string name="new_user_register_now">New user? Register Now</string>
-    <string name="login_to_have_a_perfect_holiday">Login to have a perfect holiday</string>
+    <string name="login_to_have_a_perfect_holiday">Travel with us to have a perfect holiday</string>
     <string name="pck_price">Starting Price \u20B9</string>
+    <string name="room_facilities">Room Facilities</string>
 </resources>

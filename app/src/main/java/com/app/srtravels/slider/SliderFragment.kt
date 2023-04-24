@@ -1,12 +1,12 @@
 package com.app.srtravels.slider
 
 import android.annotation.SuppressLint
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +15,6 @@ import com.app.srtravels.slider.adapter.SliderAdapter
 import com.app.srtravels.slider.model.BannerModel
 import java.util.Timer
 import java.util.TimerTask
-
 
 class SliderFragment : Fragment(), SliderAdapter.Interaction {
 
@@ -29,7 +28,8 @@ class SliderFragment : Fragment(), SliderAdapter.Interaction {
     private lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSliderBinding.inflate(inflater, container, false)
@@ -53,22 +53,29 @@ class SliderFragment : Fragment(), SliderAdapter.Interaction {
         adapter.notifyDataSetChanged()
         PagerSnapHelper().attachToRecyclerView(_binding.bannerSlider)
 
-        Timer().schedule(object : TimerTask() {
-            override fun run() {
-                if(linearLayoutManager.findLastCompletelyVisibleItemPosition() < (adapter.itemCount -1)){
-                    linearLayoutManager.smoothScrollToPosition(_binding.bannerSlider,RecyclerView.State(),
-                        linearLayoutManager.findLastCompletelyVisibleItemPosition() + 1)
-                }else if(linearLayoutManager.findLastCompletelyVisibleItemPosition() == (adapter.itemCount -1)){
-                    linearLayoutManager.smoothScrollToPosition(_binding.bannerSlider,RecyclerView.State(),
-                        linearLayoutManager.findLastCompletelyVisibleItemPosition() - 1)
+        Timer().schedule(
+            object : TimerTask() {
+                override fun run() {
+                    if (linearLayoutManager.findLastCompletelyVisibleItemPosition() < (adapter.itemCount - 1)) {
+                        linearLayoutManager.smoothScrollToPosition(
+                            _binding.bannerSlider, RecyclerView.State(),
+                            linearLayoutManager.findLastCompletelyVisibleItemPosition() + 1
+                        )
+                    } else if (linearLayoutManager.findLastCompletelyVisibleItemPosition() == (adapter.itemCount - 1)) {
+                        linearLayoutManager.smoothScrollToPosition(
+                            _binding.bannerSlider, RecyclerView.State(),
+                            linearLayoutManager.findLastCompletelyVisibleItemPosition() - 1
+                        )
+                    }
                 }
-            }
-        }, 0,5000)
-
+            },
+            0, 5000
+        )
     }
 
     override fun onItemSelected(position: Int, item: BannerModel) {
         TODO("Not yet implemented")
     }
+
 
 }

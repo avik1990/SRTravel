@@ -1,8 +1,6 @@
 package com.app.srtravels.home.modules.trip
 
 import android.content.Context
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.app.srtravels.home.modules.trip.model.TripDataModel
 import com.app.srtravels.home.modules.trip.model.Tripcategory
@@ -15,13 +13,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TripsViewModel@Inject constructor(
-    private val context : Context
+    private val context: Context
 ) : ViewModel() {
 
-   // var tripList: List<TripDataModel> = ArrayList()
+    // var tripList: List<TripDataModel> = ArrayList()
 
-    //private val _responseTripCategory: MutableLiveData<TripDataModel> = MutableLiveData()
-   // val responeTripCategory: LiveData<TripDataModel> = _responseTripCategory
+    // private val _responseTripCategory: MutableLiveData<TripDataModel> = MutableLiveData()
+    // val responeTripCategory: LiveData<TripDataModel> = _responseTripCategory
 
     fun getTripData(): List<Tripcategory> {
         val gson = Gson()
@@ -30,6 +28,4 @@ class TripsViewModel@Inject constructor(
         val dataList: TripDataModel = gson.fromJson(br, TripDataModel::class.java)
         return dataList.tripcategory
     }
-
-
 }

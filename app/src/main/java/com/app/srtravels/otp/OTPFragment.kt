@@ -1,11 +1,11 @@
 package com.app.srtravels.otp
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.app.srtravels.R
 
 class OTPFragment : Fragment() {
@@ -17,7 +17,8 @@ class OTPFragment : Fragment() {
     private lateinit var viewModel: OTViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_otp, container, false)
@@ -28,5 +29,4 @@ class OTPFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(OTViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
 }

@@ -3,12 +3,10 @@ package com.app.srtravels.onboarding.domain
 import android.content.Context
 import android.content.SharedPreferences
 
-class OnBoardingPrefManager (_context: Context) {
-
+class OnBoardingPrefManager(_context: Context) {
 
     private val pref: SharedPreferences
     private val editor: SharedPreferences.Editor
-
 
     var isFirstTimeLaunch: Boolean
         get() {
@@ -19,7 +17,6 @@ class OnBoardingPrefManager (_context: Context) {
             editor.commit()
         }
 
-
     init {
         pref = _context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         editor = pref.edit()
@@ -29,5 +26,4 @@ class OnBoardingPrefManager (_context: Context) {
         private const val IS_FIRST_TIME_LAUNCH = "IS_FIRST_TIME_LAUNCH"
         private const val PREF_NAME = "PREF_NAME"
     }
-
 }

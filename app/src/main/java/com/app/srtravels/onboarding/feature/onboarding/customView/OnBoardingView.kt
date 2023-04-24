@@ -1,19 +1,16 @@
 package com.app.srtravels.onboarding.feature.onboarding.customView
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.app.srtravels.MainActivity
 import com.app.srtravels.databinding.OnboardingViewBinding
 import com.app.srtravels.onboarding.core.setParallaxTransformation
 import com.app.srtravels.onboarding.domain.OnBoardingPrefManager
-import com.app.srtravels.onboarding.feature.onboarding.OnBoardingActivity
 import com.app.srtravels.onboarding.feature.onboarding.OnBoardingPagerAdapter
 import com.app.srtravels.onboarding.feature.onboarding.entity.OnBoardingPage
 
@@ -29,7 +26,6 @@ constructor(
     private val numberOfPages by lazy { OnBoardingPage.values().size }
     private val prefManager: OnBoardingPrefManager
 
-
     init {
         val binding = OnboardingViewBinding.inflate(LayoutInflater.from(context), this, true)
         with(binding) {
@@ -37,7 +33,6 @@ constructor(
             addingButtonsClickListeners()
             prefManager = OnBoardingPrefManager(root.context)
         }
-
     }
 
     private fun OnboardingViewBinding.setUpSlider() {
@@ -56,7 +51,6 @@ constructor(
             wormDotsIndicator.attachTo(this)
         }
     }
-
 
     private fun OnboardingViewBinding.addSlideChangeListener() {
 
@@ -96,13 +90,10 @@ constructor(
             finish()*/
             context.startActivity(Intent(context, MainActivity::class.java))
         }
-
     }
 
     private fun navigateToNextSlide(slider: ViewPager2?) {
         val nextSlidePos: Int = slider?.currentItem?.plus(1) ?: 0
         slider?.setCurrentItem(nextSlidePos, true)
     }
-
-
 }

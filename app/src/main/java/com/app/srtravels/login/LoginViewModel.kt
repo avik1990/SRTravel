@@ -1,18 +1,14 @@
 package com.app.srtravels.login
 
-import android.preference.PreferenceManager
-import android.util.Log
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.app.srtravels.login.model.UserLogin
 import com.app.srtravels.util.LoginResult
-import com.app.srtravels.util.PREF_USERNAME
-import com.app.srtravels.util.PREF_USER_PASSWORD
 
 class LoginViewModel : ViewModel() {
     var user: UserLogin = UserLogin()
-   // val preferences = PreferenceManager.getDefaultSharedPreferences(application)
+    // val preferences = PreferenceManager.getDefaultSharedPreferences(application)
     var loginResult = MutableLiveData<Int>()
     var passwordValidation = MutableLiveData<Int>()
     var usernameValidation = MutableLiveData<Int>()
@@ -25,16 +21,15 @@ class LoginViewModel : ViewModel() {
         if (isInputValid()) {
             checkIfUserLogged()
         }
-
     }
 
     fun signUp() {
         validateUsername()
         validatePassword()
 
-        if (isInputValid() && isPasswordConfirmed()) { //check if data is valid and password typed correctly
-            //write user data to shared pref
-          //  writeUserToSharedPref()
+        if (isInputValid() && isPasswordConfirmed()) { // check if data is valid and password typed correctly
+            // write user data to shared pref
+            //  writeUserToSharedPref()
             loginResult.value = LoginResult.SUCCESSFUL.value
         }
     }
@@ -52,7 +47,7 @@ class LoginViewModel : ViewModel() {
         val loggedInPassword =
             preferences.getString(PREF_USER_PASSWORD, "")*/
 
-      //  Log.d("mtag", "$loggedInUsername + $loggedInPassword")
+        //  Log.d("mtag", "$loggedInUsername + $loggedInPassword")
 
         /*if (loggedInUsername != user.username.trim() || loggedInPassword != user.password.trim()) {
             loginResult.value = LoginResult.LOGIN_ERROR.value
@@ -62,7 +57,7 @@ class LoginViewModel : ViewModel() {
         loginResult.value = LoginResult.SUCCESSFUL.value
     }
 
-    //fun isPasswordValid() = user.userPassword.length > 5
+    // fun isPasswordValid() = user.userPassword.length > 5
 
     private fun validatePassword() {
         when {

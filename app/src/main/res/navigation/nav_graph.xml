@@ -40,5 +40,32 @@
         android:id="@+id/homeFragment"
         android:name="com.app.srtravels.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_tripFragmentDetails2"
+            app:destination="@id/tripFragmentDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripFragmentDetails"
+        android:name="com.app.srtravels.trip.TripFragmentDetails"
+        android:label="fragment_trip_details"
+        tools:layout="@layout/fragment_trip_details" >
+        <action
+            android:id="@+id/action_tripFragmentDetails_to_tripMappingFragment"
+            app:destination="@id/tripMappingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripMappingFragment"
+        android:name="com.app.srtravels.tripmapping.TripMappingFragment"
+        android:label="fragment_trip_mapping"
+        tools:layout="@layout/fragment_trip_mapping" >
+        <action
+            android:id="@+id/action_tripMappingFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.app.srtravels.hotel.HotelFragment"
+        android:label="fragment_hotel"
+        tools:layout="@layout/fragment_hotel" />
 </navigation>

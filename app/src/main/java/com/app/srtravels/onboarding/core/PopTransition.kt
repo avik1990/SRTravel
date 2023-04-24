@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import androidx.core.animation.doOnEnd
 import com.app.srtravels.R
 
-
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 class PopTransition(context: Context, attrs: AttributeSet) : Visibility(context, attrs) {
 
@@ -28,7 +27,12 @@ class PopTransition(context: Context, attrs: AttributeSet) : Visibility(context,
         a.recycle()
     }
 
-    override fun onAppear(sceneRoot: ViewGroup, view: View, startValues: TransitionValues, endValues: TransitionValues): Animator {
+    override fun onAppear(
+        sceneRoot: ViewGroup,
+        view: View,
+        startValues: TransitionValues,
+        endValues: TransitionValues
+    ): Animator {
         view.scaleX = startScale
         view.scaleY = startScale
         return ObjectAnimator.ofPropertyValuesHolder(
@@ -38,7 +42,12 @@ class PopTransition(context: Context, attrs: AttributeSet) : Visibility(context,
         )
     }
 
-    override fun onDisappear(sceneRoot: ViewGroup, view: View, startValues: TransitionValues, endValues: TransitionValues): Animator {
+    override fun onDisappear(
+        sceneRoot: ViewGroup,
+        view: View,
+        startValues: TransitionValues,
+        endValues: TransitionValues
+    ): Animator {
         return ObjectAnimator.ofPropertyValuesHolder(
             view,
             PropertyValuesHolder.ofFloat(View.SCALE_X, endScale),
@@ -51,6 +60,4 @@ class PopTransition(context: Context, attrs: AttributeSet) : Visibility(context,
             }
         }
     }
-
-
 }

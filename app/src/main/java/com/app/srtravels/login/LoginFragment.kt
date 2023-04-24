@@ -1,16 +1,14 @@
 package com.app.srtravels.login
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.app.srtravels.R
 import com.app.srtravels.databinding.FragmentLoginBinding
-import dagger.hilt.android.AndroidEntryPoint
-
 
 class LoginFragment : Fragment() {
 
@@ -22,17 +20,20 @@ class LoginFragment : Fragment() {
     private lateinit var _binding: FragmentLoginBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        _binding.btnLoginButton.setOnClickListener {
+        /*_binding.btnLoginButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        }*/
+
+        _binding.tvRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
         return _binding.root
-
-
     }
 
 /*
@@ -46,11 +47,7 @@ class LoginFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
-       // _binding.userVM = viewModel
-        //_binding.executePendingBindings()
-        _binding.tvRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
-        }
+        // _binding.userVM = viewModel
+        // _binding.executePendingBindings()
     }
-
 }

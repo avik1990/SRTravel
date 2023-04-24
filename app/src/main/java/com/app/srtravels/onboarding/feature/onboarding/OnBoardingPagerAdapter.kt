@@ -9,9 +9,10 @@ import com.app.srtravels.onboarding.feature.onboarding.entity.OnBoardingPage
 /**
  *OnBoardingPagerAdapter adapter for the viewpager2
  *  @param onBoardingPageList as Array */
-class OnBoardingPagerAdapter(private val onBoardingPageList: Array<OnBoardingPage> = OnBoardingPage.values()) :
+class OnBoardingPagerAdapter(
+    private val onBoardingPageList: Array<OnBoardingPage> = OnBoardingPage.values()
+) :
     RecyclerView.Adapter<OnBoardingPagerAdapter.PagerViewHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): PagerViewHolder =
         LayoutInflater.from(parent.context).let {
@@ -20,7 +21,6 @@ class OnBoardingPagerAdapter(private val onBoardingPageList: Array<OnBoardingPag
             ).let { binding -> PagerViewHolder(binding) }
         }
 
-
     override fun getItemCount() = onBoardingPageList.size
 
     override fun onBindViewHolder(holder: PagerViewHolder, position: Int) {
@@ -28,12 +28,12 @@ class OnBoardingPagerAdapter(private val onBoardingPageList: Array<OnBoardingPag
     }
 
 /** PagerViewHolder viewHolder inner class
- * @param binding is OnboardingPageItemBinding to bind data */
-  inner  class PagerViewHolder(private val binding: OnboardingPageItemBinding) :
+     * @param binding is OnboardingPageItemBinding to bind data */
+    inner class PagerViewHolder(private val binding: OnboardingPageItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-    /**
-     * @param onBoardingPage is OnBoardingPage item
-     * bind view **/
+        /**
+         * @param onBoardingPage is OnBoardingPage item
+         * bind view **/
         fun bind(onBoardingPage: OnBoardingPage) {
             val res = binding.root.context.resources
             binding.titleTv.text = res.getString(onBoardingPage.titleResource)
@@ -41,6 +41,5 @@ class OnBoardingPagerAdapter(private val onBoardingPageList: Array<OnBoardingPag
             binding.descTV.text = res.getString(onBoardingPage.descriptionResource)
             binding.img.setImageResource(onBoardingPage.logoResource)
         }
-
     }
 }

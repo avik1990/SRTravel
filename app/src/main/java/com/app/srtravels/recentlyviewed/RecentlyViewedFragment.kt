@@ -1,11 +1,11 @@
 package com.app.srtravels.recentlyviewed
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.app.srtravels.R
 
 class RecentlyViewedFragment : Fragment() {
@@ -16,8 +16,11 @@ class RecentlyViewedFragment : Fragment() {
 
     private lateinit var viewModel: RecentlyViewedViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_recently_viewed, container, false)
     }
 
@@ -26,5 +29,4 @@ class RecentlyViewedFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(RecentlyViewedViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
 }

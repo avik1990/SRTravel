@@ -1,25 +1,23 @@
 package com.app.srtravels.home.modules.trip
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.srtravels.R
-import com.app.srtravels.databinding.FragmentHomeBinding
 import com.app.srtravels.databinding.FragmentTripsBinding
 import com.app.srtravels.home.modules.trip.adapter.TripCategoryAdapter
 import com.app.srtravels.home.modules.trip.model.Trip
-import com.app.srtravels.home.modules.trip.model.TripDataModel
 import com.app.srtravels.home.modules.trip.model.Tripcategory
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TripsFragment : Fragment(), TripCategoryAdapter.Interaction{
+class TripsFragment : Fragment(), TripCategoryAdapter.Interaction {
 
     companion object {
         fun newInstance() = TripsFragment()
@@ -31,7 +29,8 @@ class TripsFragment : Fragment(), TripCategoryAdapter.Interaction{
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentTripsBinding.inflate(inflater, container, false)
@@ -41,7 +40,7 @@ class TripsFragment : Fragment(), TripCategoryAdapter.Interaction{
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[TripsViewModel::class.java]
-        prepareMovieContentData( viewModel.getTripData())
+        prepareMovieContentData(viewModel.getTripData())
     }
 
     private fun prepareMovieContentData(dataList: List<Tripcategory>) {
@@ -54,6 +53,7 @@ class TripsFragment : Fragment(), TripCategoryAdapter.Interaction{
 
     override fun onItemSelectedHorizontal(position: Int, item: Trip) {
         Toast.makeText(requireContext(), "" + item.title, Toast.LENGTH_SHORT).show()
-    }
+        findNavController().navigate(R.id.action_homeFragment_to_tripFragmentDetails2)
 
+    }
 }

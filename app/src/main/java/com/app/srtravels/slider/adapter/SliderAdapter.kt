@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.size.Scale
-
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowAllViewpagerBinding
 import com.app.srtravels.slider.model.BannerModel
@@ -76,8 +75,8 @@ class SliderAdapter(private val context: Context, private val interaction: Inter
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
         holder.itemDataBindingUtil.checked = (currentItemSelected == position)
-        //val url = "https://www.themoviedb.org/t/p/w500" + item?.poster_path
-       // Log.e("poster_path", url)
+        // val url = "https://www.themoviedb.org/t/p/w500" + item?.poster_path
+        // Log.e("poster_path", url)
        /* Glide.with(context)
             .load(url)
             .into(holder.itemDataBindingUtil.imgBanner!!)*/

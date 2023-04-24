@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.size.Scale
 import com.app.srtravels.R
-import com.app.srtravels.databinding.RowMovielistHorizontalBinding
+import com.app.srtravels.databinding.RowTripsDataHorizontalBinding
 import com.app.srtravels.home.modules.trip.model.Trip
 
 class TripAdapter(private val children: List<Trip>, private val interaction: Interaction) :
     RecyclerView.Adapter<TripAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TripAdapter.ViewHolder {
-        val itemDatabinding = DataBindingUtil.inflate<RowMovielistHorizontalBinding>(LayoutInflater.from(parent.context), R.layout.row_movielist_horizontal, parent, false)
+        val itemDatabinding = DataBindingUtil.inflate<RowTripsDataHorizontalBinding>(LayoutInflater.from(parent.context), R.layout.row_trips_data_horizontal, parent, false)
         return ViewHolder(
             itemDatabinding,
             interaction
@@ -33,8 +33,8 @@ class TripAdapter(private val children: List<Trip>, private val interaction: Int
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
 
-        //val url = "https://www.themoviedb.org/t/p/w500" + child.poster_path
-        Log.e("ChildImage========",child.thumb)
+        // val url = "https://www.themoviedb.org/t/p/w500" + child.poster_path
+        Log.e("ChildImage========", child.thumb)
         holder.itemDataBindingUtil.movieBanner.load(child.thumb) {
             scale(Scale.FILL)
         }
@@ -45,7 +45,7 @@ class TripAdapter(private val children: List<Trip>, private val interaction: Int
     }
 
     class ViewHolder(
-        val itemDataBindingUtil: RowMovielistHorizontalBinding,
+        val itemDataBindingUtil: RowTripsDataHorizontalBinding,
         val interaction: Interaction
     ) :
         RecyclerView.ViewHolder(itemDataBindingUtil.root)

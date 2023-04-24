@@ -6,10 +6,10 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
-import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
+import okhttp3.OkHttpClient
+import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -27,7 +27,7 @@ object ProviderModule {
     @Singleton
     @Provides
     fun provideConverterFactory(): GsonConverterFactory =
-         GsonConverterFactory.create()
+        GsonConverterFactory.create()
 
     /*@Singleton
     @Provides
@@ -50,5 +50,4 @@ object ProviderModule {
     @Singleton
     @Provides
     fun provideContext(application: Application): Context = application.applicationContext
-
 }

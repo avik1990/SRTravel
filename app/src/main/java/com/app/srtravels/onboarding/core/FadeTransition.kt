@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.app.srtravels.R
 
-
 class FadeTransition : Transition {
 
     private var startAlpha: Float = 0.0f
@@ -40,7 +39,11 @@ class FadeTransition : Transition {
         captureValues(transitionValues)
     }
 
-    override fun createAnimator(sceneRoot: ViewGroup, startValues: TransitionValues, endValues: TransitionValues): Animator {
+    override fun createAnimator(
+        sceneRoot: ViewGroup,
+        startValues: TransitionValues,
+        endValues: TransitionValues
+    ): Animator {
         val view = endValues.view
         if (startAlpha != endAlpha) view.alpha = endAlpha
         return ObjectAnimator.ofFloat(view, View.ALPHA, startAlpha, endAlpha)
