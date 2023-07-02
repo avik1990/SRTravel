@@ -1,12 +1,20 @@
 package com.app.srtravels
 
+import android.app.Fragment
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.app.srtravels.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
+
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
@@ -20,24 +28,59 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         // setSupportActionBar(binding.toolbar)
 
-        // val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // appBarConfiguration = AppBarConfiguration(navController.graph)
-        // setupActionBarWithNavController(navController, appBarConfiguration)
-
+         //val navController = findNavController(R.id.nav_host_fragment_content_main)
+         //appBarConfiguration = AppBarConfiguration(navController.graph)
+         //setupActionBarWithNavController(navController, appBarConfiguration)
         navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
         navController = navHostFragment.navController
 
         navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
 
+        val navView: BottomNavigationView = binding.navView
+        navView.setupWithNavController(navController)
+
+
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            Log.e("HelloFragment", navController.currentDestination?.label.toString())
+
+            when {
+                navController.currentDestination?.label.toString() == "LoginFragment" -> {
+                    binding.navView.visibility = View.GONE
+                    binding.topBar.toolbar.visibility = View.GONE
+                }
+                navController.currentDestination?.label.toString() == "RgisterFragment" -> {
+                    binding.navView.visibility = View.GONE
+                    binding.topBar.toolbar.visibility = View.GONE
+                }
+                else -> {
+                    binding.navView.visibility = View.VISIBLE
+                    binding.topBar.toolbar.visibility = View.VISIBLE
+
+                }
+
+            }
+        }
+
+        showBottomNavigationBar()
         setNavigationGraph()
+    }
+
+    private fun showBottomNavigationBar() {
+        //if(navHostFragment)
     }
 
     private fun setNavigationGraph() {
         navGraph.setStartDestination(R.id.loginFragment)
         navController.graph = navGraph
     }
+
+    fun getCurrentFragment(): androidx.fragment.app.Fragment? {
+        return supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment_content_main)
+    }
+
+
 }

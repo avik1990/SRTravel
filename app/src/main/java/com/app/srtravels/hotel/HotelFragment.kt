@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.srtravels.databinding.FragmentHotelBinding
 import com.app.srtravels.hotel.adapter.HotelAdapter
 import com.app.srtravels.hotel.model.HotelModels
+import com.app.srtravels.tripmapping.model.Hotel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,6 +24,7 @@ class HotelFragment : Fragment(), HotelAdapter.Interaction {
     private lateinit var contentadapter: HotelAdapter
     private lateinit var viewModel: HotelViewModel
     private var _binding: FragmentHotelBinding? = null
+    private lateinit var hotel: Hotel
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -36,18 +38,17 @@ class HotelFragment : Fragment(), HotelAdapter.Interaction {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[HotelViewModel::class.java]
-
+        hotel = HotelFragmentArgs.fromBundle(requireArguments()).hotel
         prepareMovieContentData(viewModel.getHotelData())
     }
 
     private fun prepareMovieContentData(dataList: HotelModels) {
-        contentadapter = HotelAdapter(requireContext(), this)
+        contentadapter = HotelAdapter(requireContext(), hotel.hotelId,this,)
         _binding?.hotelList?.adapter = contentadapter
         _binding?.hotelList?.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         contentadapter.submitList(dataList.hotels)
         contentadapter.notifyDataSetChanged()
     }
-
 
     override fun onItemHotelSelected(position: Int, item: com.app.srtravels.hotel.model.Hotel) {
         Toast.makeText(context,item.hotelName,Toast.LENGTH_SHORT).show()

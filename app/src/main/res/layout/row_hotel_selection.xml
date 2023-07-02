@@ -56,7 +56,7 @@
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@{navigationItem.hotelName}"
+                    android:text="@{String.valueOf(navigationItem.hotelId)}"
                     android:textSize="@dimen/_13sdp" />
 
                 <TextView
@@ -71,9 +71,14 @@
 
                     <RadioButton
                         android:id="@+id/mRadioButton"
-                        android:layout_width="match_parent"
-                        android:text="Select"
-                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:text="Select Hotel"
+                        android:padding="@dimen/_10sdp"
+                        android:elevation="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_selector"
+                        android:textColor="@drawable/radio_text_color"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
@@ -92,6 +97,5 @@
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-
 </layout>
 

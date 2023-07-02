@@ -23,6 +23,12 @@
              android:layout_height="@dimen/_200sdp"/>
 
          <androidx.fragment.app.FragmentContainerView
+             android:id="@+id/fragment_search"
+             android:layout_width="match_parent"
+             android:name="com.app.srtravels.searchpackage.SearchFragment"
+             android:layout_height="wrap_content"/>
+
+         <androidx.fragment.app.FragmentContainerView
              android:id="@+id/fragment_container_recently_viewed"
              android:layout_width="match_parent"
              android:visibility="gone"

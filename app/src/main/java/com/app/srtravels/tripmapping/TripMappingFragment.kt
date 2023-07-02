@@ -6,11 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.srtravels.R
 import com.app.srtravels.databinding.FragmentTripDetailsBinding
 import com.app.srtravels.databinding.FragmentTripMappingBinding
+import com.app.srtravels.home.HomeFragmentDirections
+import com.app.srtravels.hotel.HotelFragmentArgs
 import com.app.srtravels.trip.adapter.PackageCategoryAdapter
 import com.app.srtravels.trip.model.Package
 import com.app.srtravels.tripmapping.adapter.HeaderDayAdapter
@@ -55,9 +59,13 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction {
         contentadapter.notifyDataSetChanged()
     }
 
-
-
     override fun onHotelChangeItem(position: Int, item: Hotel) {
-       findNavController().navigate(R.id.action_tripMappingFragment_to_hotelFragment)
+        //Toast.makeText(context,"Hello "+item.hotelName,Toast.LENGTH_SHORT).show()
+        //findNavController().navigate(R.id.action_tripMappingFragment_to_hotelFragment)
+       // val action = TripMappingFragmentDirections.actionTripMappingFragmentToHotelFragment(item)
+       // findNavController().navigate(action)
+
+        val action = TripMappingFragmentDirections.actionTripMappingFragmentToHotelFragment(item)
+        findNavController().navigate(action)
     }
 }

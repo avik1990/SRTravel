@@ -2,11 +2,14 @@ package com.app.srtravels.hotel.adapter
 
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
@@ -16,12 +19,14 @@ import com.app.srtravels.databinding.RowRoomBinding
 import com.app.srtravels.databinding.RowRoomSelectionBinding
 import com.app.srtravels.hotel.model.Room
 
-
 class HotelRoomAdapter(private val context: Context, private val children: List<Room>,
-                       private val interaction: Interaction) :
+                       private val interaction: Interaction,private val roomIds: List<Int>) :
     RecyclerView.Adapter<HotelRoomAdapter.NavigationOptionViewHolder>() {
 
+    var selectedItemPos = -1
     var currentItemSelected: Int = 0
+    var lastItemSelectedPos = -1
+
     private val viewPool = RecyclerView.RecycledViewPool()
 
     private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Room>() {
@@ -63,7 +68,6 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
             itemDatabinding,
             interaction
         )
-
     }
 
     override fun getItemCount(): Int {
@@ -79,6 +83,13 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
         holder.itemDataBindingUtil.navigationItem = item
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
+
+        Log.e("RoomIds===============",roomIds.toString())
+        if(roomIds.contains(item.roomId)){
+            holder.itemDataBindingUtil.mSelectRoom.visibility = View.VISIBLE
+        }else{
+            holder.itemDataBindingUtil.mSelectRoom.visibility = View.GONE
+        }
 
         val list: List<String> = listOf(*item.roomFacility.split(",").toTypedArray())
         if(list.isNotEmpty()){
@@ -103,5 +114,28 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
                 holder.itemDataBindingUtil.vContainer.addView(tv)
             }
         }
+
+        holder.itemDataBindingUtil.mSelectRoom.setOnCheckedChangeListener(null)
+
+        if(position == selectedItemPos) {
+            holder.itemDataBindingUtil.mSelectRoom.isChecked = true
+            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.colorAccent)
+        }
+        else {
+            holder.itemDataBindingUtil.mSelectRoom.isChecked = false
+            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.gray)
+        }
+
+        holder.itemDataBindingUtil.mSelectRoom.setOnCheckedChangeListener { _, _ ->
+            selectedItemPos = position
+            lastItemSelectedPos = if(lastItemSelectedPos == -1)
+                selectedItemPos
+            else {
+                notifyItemChanged(lastItemSelectedPos)
+                selectedItemPos
+            }
+            notifyItemChanged(selectedItemPos)
+        }
+
     }
 }

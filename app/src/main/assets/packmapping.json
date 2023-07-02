@@ -57,6 +57,7 @@
       ],
       "hotels": [
         {
+          "hotelId": 133,
           "hotelName": "Orchid",
           "hotelRating": "5 Star",
           "hotelLocation": "Shimla",
@@ -162,7 +163,8 @@
       ],
       "hotels": [
         {
-          "hotelName": "Orchid",
+          "hotelId": 134,
+          "hotelName": "Hyat",
           "hotelRating": "5 Star",
           "hotelLocation": "Shimla",
           "hotelImages": [
@@ -261,6 +263,7 @@
       ],
       "hotels": [
         {
+          "hotelId": 135,
           "hotelName": "Orchid",
           "hotelRating": "5 Star",
           "hotelLocation": "Shimla",

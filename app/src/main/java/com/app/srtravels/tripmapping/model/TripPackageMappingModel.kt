@@ -1,5 +1,9 @@
 package com.app.srtravels.tripmapping.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class TripPackageMappingModel(
     val Days: List<Day>,
     val packageCars: Int,
@@ -12,4 +16,4 @@ data class TripPackageMappingModel(
     val packageOfferedPrice: Int,
     val packageStartDate: String,
     val packageThumbnail: String
-)
+): Parcelable

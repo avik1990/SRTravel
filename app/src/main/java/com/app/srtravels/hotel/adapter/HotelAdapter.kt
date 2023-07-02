@@ -1,6 +1,7 @@
 package com.app.srtravels.hotel.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -16,11 +17,14 @@ import com.app.srtravels.databinding.RowHotelSelectionBinding
 import com.app.srtravels.hotel.model.Hotel
 import com.app.srtravels.hotel.model.Room
 
-class HotelAdapter(private val context: Context, private val interaction: Interaction) :
+class HotelAdapter(private val context: Context, private var selectedHotelID: Int, private val interaction: Interaction) :
     RecyclerView.Adapter<HotelAdapter.NavigationOptionViewHolder>(),HotelRoomAdapter.Interaction {
 
     var selectedItemPos = -1
     var lastItemSelectedPos = -1
+    var roomForHotel: MutableList<Int> = mutableListOf<Int>()
+
+
 
     private val viewPool = RecyclerView.RecycledViewPool()
 
@@ -78,19 +82,35 @@ class HotelAdapter(private val context: Context, private val interaction: Intera
         holder.itemDataBindingUtil.navigationItem = item
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
-
         holder.itemDataBindingUtil.mRadioButton.setOnCheckedChangeListener(null)
-        if(position == selectedItemPos) {
-            holder.itemDataBindingUtil.mRadioButton.isChecked = true;
-            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.colorAccent)
+
+        if(selectedHotelID == item.hotelId) {
+            selectedItemPos = position
+            lastItemSelectedPos = position
+            //get the selected parent child ids, so that user can not select other parent child item
+            roomForHotel.clear()
+            for(i in 0 until item.rooms.size){
+                roomForHotel.add(item.rooms[i].roomId)
+            }
         }
-        else {
+
+        if(position == selectedItemPos) {
+            holder.itemDataBindingUtil.mRadioButton.isChecked = true
+            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.colorAccent)
+        } else {
             holder.itemDataBindingUtil.mRadioButton.isChecked = false
             holder.itemDataBindingUtil.container.setBackgroundResource(R.color.white)
         }
 
         holder.itemDataBindingUtil.mRadioButton.setOnCheckedChangeListener { _, _ ->
             selectedItemPos = position
+            selectedHotelID = item.hotelId
+            //get the selected parent child ids, so that user can not select other parent child item
+            roomForHotel.clear()
+            for(i in 0 until item.rooms.size){
+                roomForHotel.add(item.rooms[i].roomId)
+            }
+
             lastItemSelectedPos = if(lastItemSelectedPos == -1)
                 selectedItemPos
             else {
@@ -105,8 +125,11 @@ class HotelAdapter(private val context: Context, private val interaction: Intera
         }
 
         holder.itemDataBindingUtil.roomListView.apply {
+            Toast.makeText(context,item.rooms.toString(),Toast.LENGTH_SHORT).show()
+            Log.e("ROOMS",item.rooms.toString())
+
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.roomListView.context, LinearLayoutManager.VERTICAL, false)
-            adapter = HotelRoomAdapter(context,item.rooms, this@HotelAdapter)
+            adapter = HotelRoomAdapter(context,item.rooms, this@HotelAdapter, roomForHotel)
             holder.itemDataBindingUtil.roomListView.setRecycledViewPool(viewPool)
         }
     }

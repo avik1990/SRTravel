@@ -1,6 +1,7 @@
 package com.app.srtravels.hotel.model
 
 data class Room(
+    val roomId: Int,
     val roomFacility: String,
     val roomImages: List<String>,
     val roomName: String,

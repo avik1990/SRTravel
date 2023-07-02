@@ -1,5 +1,9 @@
 package com.app.srtravels.tripmapping.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Room(
     val roomFacility: String,
     val roomImages: List<String>,
@@ -8,4 +12,4 @@ data class Room(
     val roomWithDoubleBedPrice: Int,
     val roomWithOutAc: Int,
     val roomWithSingleBed: Int
-)
+): Parcelable

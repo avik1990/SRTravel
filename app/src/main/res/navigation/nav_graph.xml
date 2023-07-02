@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.app.srtravels.register.RegisterFragment"
-        android:label="fragment_register"
+        android:label="RgisterFragment"
         tools:layout="@layout/fragment_register" >
 
         <action
@@ -39,7 +39,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.app.srtravels.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="FragmentHome"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_tripFragmentDetails2"
@@ -67,5 +67,9 @@
         android:id="@+id/hotelFragment"
         android:name="com.app.srtravels.hotel.HotelFragment"
         android:label="fragment_hotel"
-        tools:layout="@layout/fragment_hotel" />
+        tools:layout="@layout/fragment_hotel" >
+        <argument
+            android:name="hotel"
+            app:argType="com.app.srtravels.tripmapping.model.Hotel" />
+    </fragment>
 </navigation>
