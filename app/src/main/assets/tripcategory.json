@@ -1,0 +1,108 @@
+{
+  "tripcategory": [
+    {
+      "category": "Honeymoon Package",
+      "trips": [
+        {
+          "description": "HBO GO now works with Chromecast -- the easiest way to enjoy online video on your TV. For when you want to settle into your Iron Throne to watch the latest episodes. For $35.\nLearn how to use Chromecast with HBO GO and more at google.com/chromecast.",
+          "thumb": "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=",
+          "title": "Thailand",
+          "startingPrice": "25000"
+        },
+        {
+          "description": "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+          "thumb": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc=",
+          "title": "Goa",
+          "startingPrice": "25000"
+        },
+        {
+          "description": "The first Blender Open Movie from 2006",
+          "thumb": "https://media.istockphoto.com/id/1069539210/photo/fantastic-autumn-sunset-of-hintersee-lake.jpg?s=612x612&w=0&k=20&c=oqKJzUgnjNQi-nSJpAxouNli_Xl6nY7KwLBjArXr_GE=",
+          "title": "Digha",
+          "startingPrice": "26000"
+        }
+      ]
+    },
+    {
+      "category": "Top Selling Packages",
+      "id": 7,
+      "trips": [
+        {
+          "id": 1,
+          "description": "Tears of Steel was realized with crowd-funding by users of the open source 3D creation tool Blender. Target was to improve and test a complete open and free pipeline for visual effects in film - and to make a compelling sci-fi film in Amsterdam, the Netherlands.  The film itself, and all raw material used for making it, have been released under the Creatieve Commons 3.0 Attribution license. Visit the tearsofsteel.org website to find out more about this, or to purchase the 4-DVD box with a lot of extras.  (CC) Blender Foundation - http://www.tearsofsteel.org",
+          "thumb": "https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo=",
+          "title": "Andaman & Nicobar",
+          "startingPrice": "2500"
+        },
+        {
+          "id": 2,
+          "description": "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+          "thumb": "https://media.istockphoto.com/id/486755202/photo/torrent.jpg?s=612x612&w=0&k=20&c=sgaOAV2v--UZJq4K0ogph_5sAhwJ7IHSV8jgRFZoXbQ=",
+          "title": "Srilanka",
+          "startingPrice": "6500"
+        },
+        {
+          "id": 3,
+          "description": "The first Blender Open Movie from 2006",
+          "thumb": "https://media.istockphoto.com/id/1282389397/photo/wizard-falls-on-the-metolius-river-autumn-in-oregon.jpg?s=612x612&w=0&k=20&c=eI0XOUiIk5KxREBMrE0pCUvLy7Cmg8EUwI9a1lTy6m8=",
+          "title": "Himachal",
+          "startingPrice": "9800"
+        }
+      ]
+    },
+    {
+      "category": "Pilgrimage packages",
+      "id": 9,
+      "trips": [
+        {
+          "id": 4,
+          "description": "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+          "thumb": "https://media.istockphoto.com/id/1176297080/photo/river-and-green-forest-in-tuchola-natural-park-aerial-view.jpg?s=612x612&w=0&k=20&c=X3sZDojQf1gF9F4Szqs78mKi1JzrfrO3FSQ8MSnJmo8=",
+          "title": "Amritsar",
+          "startingPrice": "19800"
+        },
+        {
+          "id": 5,
+          "description": "The first Blender Open Movie from 2006",
+          "thumb": "https://media.istockphoto.com/id/863383050/photo/dramatic-sunset-over-river-seine-in-paris-france-with-conciergerie-and-cruise-boats.jpg?s=612x612&w=0&k=20&c=-n7ZYuXBe_3noVCRez5pQZEQeFL0dweG8ulCUPfBoXE=",
+          "title": "Vrindaban",
+          "startingPrice": "179800"
+        },
+        {
+          "id": 6,
+          "description": "The Smoking Tire meets up with Chris and Jorge from CarsForAGrand.com to see just how far $1,000 can go when looking for a car.The Smoking Tire meets up with Chris and Jorge from CarsForAGrand.com to see just how far $1,000 can go when looking for a car.",
+          "thumb": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/WhatCarCanYouGetForAGrand.jpg",
+          "title": "Kashmir",
+          "startingPrice": "5433"
+        }
+      ]
+    },
+    {
+      "category": "Explore The Unexplored",
+      "id": 10,
+      "trips": [
+        {
+          "id": 7,
+          "description": "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+          "thumb": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+          "title": "Mauritaus",
+          "startingPrice": "54333"
+        },
+        {
+          "id": 8,
+          "description": "The first Blender Open Movie from 2006",
+          "thumb": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+          "title": "Island",
+          "startingPrice": "154333"
+        },
+        {
+          "id": 9,
+          "description": "The Smoking Tire meets up with Chris and Jorge from CarsForAGrand.com to see just how far $1,000 can go when looking for a car.The Smoking Tire meets up with Chris and Jorge from CarsForAGrand.com to see just how far $1,000 can go when looking for a car.",
+          "thumb": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/WhatCarCanYouGetForAGrand.jpg",
+          "title": "Maldives",
+          "startingPrice": "543333"
+        }
+      ]
+    }
+  ]
+}
