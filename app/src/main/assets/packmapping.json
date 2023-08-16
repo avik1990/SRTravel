@@ -1,0 +1,462 @@
+{
+  "packageId": 134,
+  "packageName": "Flexi Package",
+  "packageStartDate": "18-04-2023",
+  "packageEndDate": "21-04-2023",
+  "packageDays": "3N/2D",
+  "packageOfferedPrice": 23000,
+  "packageDiscountedPrice": 20000,
+  "packageHotels": 2,
+  "packageCars": 3,
+  "packageThumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+  "Days": [
+    {
+      "dayName": "Day 1",
+      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "places": [
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Nandan",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Alipore Zoo",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ],
+      "routes": [
+        {
+          "routeName": "Airport to Ariport",
+          "car": [
+            {
+              "carOwnerName": "SRT Travels",
+              "carPrice": 12903,
+              "carContact": 9433435957,
+              "carType": "Hactback- 4 Seater"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "hotelId": 133,
+          "hotelName": "Orchid",
+          "hotelRating": "5 Star",
+          "hotelLocation": "Shimla",
+          "hotelImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "rooms": [
+            {
+              "id": 3244,
+              "roomName": "Deluxe",
+              "roomWithACprice": 1200,
+              "roomWithOutAc": 100,
+              "roomWithDoubleBedPrice": 3000,
+              "roomWithSingleBed": 3000,
+              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+              "roomImages": [
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayName": "Day 2",
+      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "places": [
+        {
+          "placeName": "Chapora Fort",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Agoda Fort",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Sandakfu",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ],
+      "routes": [
+        {
+          "routeName": "Airport to Ariport",
+          "car": [
+            {
+              "carOwnerName": "SRT Travels",
+              "carPrice": 12903,
+              "carContact": 9433435957,
+              "carType": "Hactback- 4 Seater"
+            },
+            {
+              "carOwnerName": "Tour & Travels",
+              "carPrice": 120,
+              "carContact": 9433435957,
+              "carType": "Hactback- 12 Seater"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "hotelId": 134,
+          "hotelName": "Hyat",
+          "hotelRating": "5 Star",
+          "hotelLocation": "Shimla",
+          "hotelImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "rooms": [
+            {
+              "id": 32409,
+              "roomName": "Deluxe",
+              "roomWithACprice": 1200,
+              "roomWithOutAc": 100,
+              "roomWithDoubleBedPrice": 3000,
+              "roomWithSingleBed": 3000,
+              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+              "roomImages": [
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayName": "Day 3",
+      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "places": [
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ],
+      "routes": [
+        {
+          "routeName": "Airport to Ariport",
+          "car": [
+            {
+              "carOwnerName": "SRT Travels",
+              "carPrice": 12903,
+              "carContact": 9433435957,
+              "carType": "Hactback- 4 Seater"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "hotelId": 135,
+          "hotelName": "Orchid",
+          "hotelRating": "5 Star",
+          "hotelLocation": "Shimla",
+          "hotelImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "rooms": [
+            {
+              "id": 3244,
+              "roomName": "Deluxe",
+              "roomWithACprice": 1200,
+              "roomWithOutAc": 100,
+              "roomWithDoubleBedPrice": 3000,
+              "roomWithSingleBed": 3000,
+              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+              "roomImages": [
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayName": "Day 4",
+      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "places": [
+        {
+          "placeName": "Agra Fort",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Taj Mahal",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ],
+      "routes": [
+        {
+          "routeName": "Airport to Ariport",
+          "car": [
+            {
+              "carOwnerName": "SRT Travels",
+              "carPrice": 12903,
+              "carContact": 9433435957,
+              "carType": "Hactback- 4 Seater"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "hotelId": 135,
+          "hotelName": "Orchid",
+          "hotelRating": "5 Star",
+          "hotelLocation": "Shimla",
+          "hotelImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "rooms": [
+            {
+              "id": 39044,
+              "roomName": "Deluxe",
+              "roomWithACprice": 1200,
+              "roomWithOutAc": 100,
+              "roomWithDoubleBedPrice": 3000,
+              "roomWithSingleBed": 3000,
+              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+              "roomImages": [
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayName": "Day 5",
+      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "places": [
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ],
+      "routes": [
+        {
+          "routeName": "Airport to Ariport",
+          "car": [
+            {
+              "carOwnerName": "SRT Travels",
+              "carPrice": 12903,
+              "carContact": 9433435957,
+              "carType": "Hactback- 4 Seater"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "hotelId": 135,
+          "hotelName": "Orchid",
+          "hotelRating": "5 Star",
+          "hotelLocation": "Shimla",
+          "hotelImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "rooms": [
+            {
+              "id": 309876,
+              "roomName": "Deluxe",
+              "roomWithACprice": 1200,
+              "roomWithOutAc": 100,
+              "roomWithDoubleBedPrice": 3000,
+              "roomWithSingleBed": 3000,
+              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+              "roomImages": [
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dayName": "Day 6",
+      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "places": [
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "placeName": "Victoria",
+          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "placeImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ],
+      "routes": [
+        {
+          "routeName": "Airport to Ariport",
+          "car": [
+            {
+              "carOwnerName": "SRT Travels",
+              "carPrice": 12903,
+              "carContact": 9433435957,
+              "carType": "Hactback- 4 Seater"
+            }
+          ]
+        }
+      ],
+      "hotels": [
+        {
+          "hotelId": 135,
+          "hotelName": "Orchid",
+          "hotelRating": "5 Star",
+          "hotelLocation": "Shimla",
+          "hotelImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ],
+          "rooms": [
+            {
+              "id": 309876,
+              "roomName": "Deluxe",
+              "roomWithACprice": 1200,
+              "roomWithOutAc": 100,
+              "roomWithDoubleBedPrice": 3000,
+              "roomWithSingleBed": 3000,
+              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+              "roomImages": [
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

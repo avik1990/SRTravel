@@ -1,0 +1,225 @@
+{
+  "hotels": [
+    {
+      "hotelId": 132,
+      "hotelName": "Orchid",
+      "hotelRating": "5 Star",
+      "hotelLocation": "Shimla",
+      "hotelImages": [
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ],
+      "rooms": [
+        {
+          "roomId" : 1,
+          "roomName": "Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 2,
+          "roomName": "Couple Special",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 3,
+          "roomName": "Super Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "hotelId": 133,
+      "hotelName": "Taj Bengal",
+      "hotelRating": "5 Star",
+      "hotelLocation": "Shimla",
+      "hotelImages": [
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ],
+      "rooms": [
+        {
+          "roomId"  : 4,
+          "roomName": "Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 5,
+          "roomName": "Couple Special",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 6,
+          "roomName": "Super Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "hotelId": 134,
+      "hotelName": "Hyat",
+      "hotelRating": "5 Star",
+      "hotelLocation": "Shimla",
+      "hotelImages": [
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ],
+      "rooms": [
+        {
+          "roomId"  : 7,
+          "roomName": "Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 8,
+          "roomName": "Super Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 9,
+          "roomName": "Couple Special",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 10,
+          "roomName": "Super Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 11,
+          "roomName": "Super Deluxe",
+          "roomWithACprice": 1200,
+          "roomWithOutAc": 100,
+          "roomWithDoubleBedPrice": 3000,
+          "roomWithSingleBed": 3000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 12,
+          "roomName": "Super Deluxe",
+          "roomWithACprice": 12010,
+          "roomWithOutAc": 200,
+          "roomWithDoubleBedPrice": 4000,
+          "roomWithSingleBed": 5000,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        },
+        {
+          "roomId"  : 13,
+          "roomName": "Super Deluxe1",
+          "roomWithACprice": 12020,
+          "roomWithOutAc": 1020,
+          "roomWithDoubleBedPrice": 30010,
+          "roomWithSingleBed": 30020,
+          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+          "roomImages": [
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}

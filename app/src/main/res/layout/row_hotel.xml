@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="navigationItem"
+            type="com.app.srtravels.tripmapping.model.Hotel" />
+
+
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="checked"
+            type="Boolean" />
+        <variable
+            name="clickEvent"
+            type="com.app.srtravels.tripmapping.adapter.DayWiseDetailsAdapter.Interaction"/>
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/movieBanner"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:layout_margin="@dimen/_5sdp"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare"
+                    android:layout_height="@dimen/_100sdp"/>
+
+                <TextView
+                    android:id="@+id/change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPurple"
+                    android:singleLine="true"
+                    android:onClick="@{()->clickEvent.onHotelSelected(position,navigationItem)}"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Change"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/movieTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPurple"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@{navigationItem.hotelName}"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/pckPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPurple"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@{navigationItem.hotelLocation}"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Rooms"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/roomListView"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="your_smile_is_our_responsibility">Your Smile is our Responsibility</string>
+
+    <string name="onboarding_slide1_title">Create an account</string>
+    <string name="onboarding_slide1_subtitle">Connect with people around the world</string>
+    <string name="onboarding_slide1_desc">User will be able to give you live, chat and meet
+        with people nearby.</string>
+
+    <string name="onboarding_slide2_title">Login to your account</string>
+    <string name="onboarding_slide2_subtitle">Let\'s build connection with new people</string>
+    <string name="onboarding_slide2_desc">Connect helps you locate the people around you who
+        are closest from your home.</string>
+
+    <string name="onboarding_slide3_title">Login to your account</string>
+    <string name="onboarding_slide3_subtitle">Feel the happiness</string>
+    <string name="onboarding_slide3_desc">User will be able to give you live, chat and meet
+        with people nearby.</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get started</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="new_user">New User?</string>
+    <string name="invalid_username">Invalid username</string>
+    <string name="invalid_password">Invalid password</string>
+
+    <string name="home_screen_title">Home</string>
+    <string name="home_screen_text">Can\'t walk? then fly!</string>
+    <string name="previous">previous</string>
+
+
+    <string name="login_text">Login</string>
+    <string name="edit_text_username">Username</string>
+    <string name="edit_text_password">Password</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="button_sign_up">Don`t have an account? Sign up!</string>
+
+    <string name="sign_up">Sign up</string>
+    <string name="edit_text_password_confirm">Confirm password</string>
+    <string name="button_sign_up_activity">Sign up</string>
+    <string name="password_error_no_password">Please enter password</string>
+    <string name="password_error_short_password">Password should contain more than 5 letters</string>
+    <string name="password_error_password_not_confirmed">Wrong password! Please type again</string>
+    <string name="username_error_no_username">Please enter username</string>
+    <string name="username_error_long_username">Username is too long</string>
+    <string name="login_error_incorrect_input">Username or login is incorrect. Try again or sign up!</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="already_nhave_an_naccount">Already \nhave an \nAccount?</string>
+    <string name="new_user_register_now">New user? Register Now</string>
+    <string name="login_to_have_a_perfect_holiday">Travel with us to have a perfect holiday</string>
+    <string name="pck_price">Starting Price \u20B9</string>
+    <string name="room_facilities">Room Facilities</string>
+    <string name="trips">Trips</string>
+</resources>

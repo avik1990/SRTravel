@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Background color of the BottomSheet -->
+    <corners android:radius="16dp" /> <!-- Adjust the radius as needed for your desired corner curvature -->
+</shape>

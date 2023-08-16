@@ -1,0 +1,194 @@
+{
+  "tripId": 3434276,
+  "tripName": "Shimla",
+  "tripDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "tripImages": [
+    "https://i.dummyjson.com/data/products/8/1.jpg",
+    "https://i.dummyjson.com/data/products/8/2.jpg",
+    "https://i.dummyjson.com/data/products/8/3.jpg",
+    "https://i.dummyjson.com/data/products/8/4.jpg",
+    "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+  ],
+  "packages": [
+    {
+      "packageCategory": "Honeymon Package",
+      "packageDesc": "Enjoy the winter",
+      "packageDetails": [
+        {
+          "packageId": 1,
+          "packageName": "Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 2,
+          "packageName": "Super Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 3,
+          "packageName": "Super Deluxe Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        }
+      ]
+    },
+    {
+      "packageCategory": "Super Package",
+      "packageDesc": "Enjoy the winter",
+      "packageDetails": [
+        {
+          "packageId": 1,
+          "packageName": "Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 2,
+          "packageName": "Super Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 3,
+          "packageName": "Super Deluxe Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        }
+      ]
+    },
+    {
+      "packageCategory": "Super Group Package",
+      "packageDesc": "Enjoy the winter",
+      "packageDetails": [
+        {
+          "packageId": 1,
+          "packageName": "Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 2,
+          "packageName": "Super Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 3,
+          "packageName": "Super Deluxe Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        }
+      ]
+    },
+    {
+      "packageCategory": "Super Solo Package",
+      "packageDesc": "Enjoy the winter",
+      "packageDetails": [
+        {
+          "packageId": 1,
+          "packageName": "Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 2,
+          "packageName": "Super Flexi Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        },
+        {
+          "packageId": 3,
+          "packageName": "Super Deluxe Package",
+          "packageStartDate": "17-04-2023",
+          "packageEndDate": "21-04-2023",
+          "packageDays": "4N/3D",
+          "packageStopage": "2N Shimla | 2N Manali",
+          "packageOfferedPrice": 23000,
+          "packageDiscountedPrice": 20000,
+          "packageHotels": 2,
+          "packageCars": 3,
+          "packageThumbnail": "https://media.istockphoto.com/id/1043959780/photo/longs-peak-at-bear-lake-longs-peak-and-glacier-gorge-reflecting-in-blue-bear-lake-on-a-calm.jpg?s=612x612&w=0&k=20&c=RlGUdCI1X2luuxBKnqtI04WnlqO91MZ0RYfJOFyxSoc="
+        }
+      ]
+    }
+  ]
+}

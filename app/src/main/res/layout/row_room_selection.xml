@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="navigationItem"
+            type="com.app.srtravels.hotel.model.Room" />
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="checked"
+            type="Boolean" />
+        <variable
+            name="clickEvent"
+            type="com.app.srtravels.hotel.adapter.HotelRoomAdapter.Interaction"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->clickEvent.onRoomSelected(position,navigationItem)}"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/movieTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPurple"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@{navigationItem.roomName}"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/pckPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPurple"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@{String.valueOf(navigationItem.roomWithACprice)}"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/room_facilities"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"/>
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/v_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        app:alignContent="stretch"
+                        app:alignItems="stretch"
+                        app:flexWrap="wrap">
+                    </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RadioButton
+            android:id="@+id/mSelectRoom"
+            android:layout_width="wrap_content"
+            android:text="Select Room"
+            android:padding="@dimen/_10sdp"
+            android:elevation="@dimen/_4sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:button="@android:color/transparent"
+            android:background="@drawable/radio_selector"
+            android:textColor="@drawable/radio_text_color"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
+

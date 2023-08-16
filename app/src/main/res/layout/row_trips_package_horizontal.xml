@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="navigationItem"
+            type="com.app.srtravels.trip.model.PackageDetail" />
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="checked"
+            type="Boolean" />
+        <variable
+            name="clickEvent"
+            type="com.app.srtravels.trip.adapter.PackageAdapter.Interaction"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_160sdp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->clickEvent.onChildItemSelected(position,navigationItem)}"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/movieBanner"
+                android:layout_width="@dimen/_135sdp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:layout_margin="@dimen/_5sdp"
+                app:shapeAppearanceOverlay="@style/RoundedSquare"
+                android:layout_height="@dimen/_100sdp"/>
+
+            <TextView
+                android:id="@+id/movieTitle"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@{navigationItem.packageName}"
+                android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/pckPrice"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@{@string/pck_price + navigationItem.packageOfferedPrice}"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
+

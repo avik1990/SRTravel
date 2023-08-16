@@ -1,0 +1,46 @@
+{
+  "rooms": [
+    {
+      "roomId"  : 1,
+      "roomName": "Deluxe",
+      "roomWithACprice": 1200,
+      "roomWithOutAc": 100,
+      "roomWithDoubleBedPrice": 3000,
+      "roomWithSingleBed": 3000,
+      "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+      "roomImages": [
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ]
+    },
+    {
+      "roomId"  : 2,
+      "roomName": "Couple Special",
+      "roomWithACprice": 1200,
+      "roomWithOutAc": 100,
+      "roomWithDoubleBedPrice": 3000,
+      "roomWithSingleBed": 3000,
+      "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
+      "roomImages": [
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ]
+    },
+    {
+      "roomId"  : 3,
+      "roomName": "Super Deluxe",
+      "roomWithACprice": 1200,
+      "roomWithOutAc": 100,
+      "roomWithDoubleBedPrice": 3000,
+      "roomWithSingleBed": 3000,
+      "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
+      "roomImages": [
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ]
+    }
+  ]
+}

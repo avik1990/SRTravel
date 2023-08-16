@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_gravity="center"
+        android:text="@string/login_to_have_a_perfect_holiday"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:text="SRT Travels"
+        android:layout_height="wrap_content"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:lottie_fileName="ic_travel.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmail"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:textColorHint="@color/colorPurple"
+        android:hint="@string/enter_phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:maxLines="1"
+            style="@style/modifiedEditText"
+            android:inputType="number"
+            android:gravity="center"
+            android:maxLength="10"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoginButton"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_160sdp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        style="@style/parent"
+        android:textAlignment="center"
+        android:textColor="@color/colorPurple"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="@dimen/_14sdp"
+        android:text="@string/new_user_register_now"
+        android:layout_marginTop="@dimen/_15sdp" />
+</LinearLayout>
