@@ -1,6 +1,8 @@
-package com.app.srtravels.tripmapping
+/*
+package com.app.srtravels.horizotalcalender
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.app.srtravels.horizotalcalender.model.Calenders
@@ -17,12 +19,19 @@ import java.util.Locale
 import javax.inject.Inject
 
 @HiltViewModel
-class TripMappingViewModel@Inject constructor(
+class SharedViewModel@Inject constructor(
     private val context: Context
-) : ViewModel() {
+): ViewModel() {
 
     var _calenderMutableData: MutableLiveData<MutableList<Calenders>> = MutableLiveData()
     val listCalenderData = mutableListOf<Calenders>()
+
+   // private val _sharedVariable = MutableLiveData<Int>()
+  ///  val sharedVariable: LiveData<Int> = _sharedVariable
+
+   // fun updateSharedVariable(newValue: Int) {
+    //    _sharedVariable.value = newValue
+  //  }
 
     fun getTripPackageMappingData(): TripPackageMappingModel {
         val gson = Gson()
@@ -54,6 +63,4 @@ class TripMappingViewModel@Inject constructor(
         }
         _calenderMutableData.value = listCalenderData
     }
-
-
-}
+}*/

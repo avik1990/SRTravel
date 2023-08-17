@@ -14,10 +14,11 @@ import com.app.srtravels.databinding.RowHotelBinding
 import com.app.srtravels.tripmapping.model.Hotel
 import com.app.srtravels.tripmapping.model.Room
 
-class DayWiseDetailsAdapter(private val context: Context,private val children: List<Hotel>, private val interaction: Interaction) :
+class DayWiseDetailsAdapter(private val context: Context,private val children: List<Hotel>,
+                            private val interaction: Interaction) :
     RecyclerView.Adapter<DayWiseDetailsAdapter.ViewHolder>(), RoomAdapter.Interaction {
 
-    private val viewPool = RecyclerView.RecycledViewPool()
+   // private val viewPool = RecyclerView.RecycledViewPool()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemDatabinding = DataBindingUtil.inflate<RowHotelBinding>(LayoutInflater.from(parent.context),
@@ -49,7 +50,7 @@ class DayWiseDetailsAdapter(private val context: Context,private val children: L
                     false
                 )
                 adapter = RoomAdapter(context, child.rooms, this@DayWiseDetailsAdapter)
-                holder.itemDataBindingUtil.roomListView.setRecycledViewPool(viewPool)
+               // holder.itemDataBindingUtil.roomListView.setRecycledViewPool(viewPool)
             }
 
     }

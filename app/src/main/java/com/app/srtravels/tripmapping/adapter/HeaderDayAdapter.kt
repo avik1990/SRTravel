@@ -23,7 +23,7 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
     RouteAdapter.Interaction {
 
     var currentItemSelected: Int = 0
-    private val viewPool = RecyclerView.RecycledViewPool()
+   // private val viewPool = RecyclerView.RecycledViewPool()
 
     private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Day>() {
 
@@ -76,7 +76,7 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
 
     override fun onBindViewHolder(holder: NavigationOptionViewHolder, position: Int) {
         val item = differ.currentList[position]
-        holder.setIsRecyclable(false)
+        //holder.setIsRecyclable(false)
         holder.itemDataBindingUtil.navigationItem = item
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
@@ -85,19 +85,19 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
         holder.itemDataBindingUtil.listSubCatItem.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.listSubCatItem.context, LinearLayoutManager.VERTICAL, false)
             adapter = DayWiseDetailsAdapter(context,item.hotels, this@HeaderDayAdapter)
-            holder.itemDataBindingUtil.listSubCatItem.setRecycledViewPool(viewPool)
+           // holder.itemDataBindingUtil.listSubCatItem.setRecycledViewPool(viewPool)
         }
 
         holder.itemDataBindingUtil.placeListView.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.placeListView.context, LinearLayoutManager.HORIZONTAL, false)
             adapter = PlaceAdapter(context,item.places, this@HeaderDayAdapter)
-            holder.itemDataBindingUtil.placeListView.setRecycledViewPool(viewPool)
+           // holder.itemDataBindingUtil.placeListView.setRecycledViewPool(viewPool)
         }
 
         holder.itemDataBindingUtil.carListView.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.carListView.context, LinearLayoutManager.HORIZONTAL, false)
             adapter = RouteAdapter(context,item.routes, this@HeaderDayAdapter)
-            holder.itemDataBindingUtil.carListView.setRecycledViewPool(viewPool)
+         //   holder.itemDataBindingUtil.carListView.setRecycledViewPool(viewPool)
         }
     }
 
