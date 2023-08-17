@@ -13,25 +13,25 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowRoomBinding
-import com.app.srtravels.tripmapping.model.Room
+import com.app.srtravels.tripmapping.model.HotelRoom
 
 
-class RoomAdapter(private val context: Context, private val children: List<Room>, private val interaction: Interaction) :
+class RoomAdapter(private val context: Context, private val children: List<HotelRoom>, private val interaction: Interaction) :
     RecyclerView.Adapter<RoomAdapter.NavigationOptionViewHolder>() {
 
 
-    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Room>() {
+    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<HotelRoom>() {
 
         override fun areItemsTheSame(
-            oldItem: Room,
-            newItem: Room
+            oldItem: HotelRoom,
+            newItem: HotelRoom
         ): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.HotelRoomGuid == newItem.HotelRoomGuid
         }
 
         override fun areContentsTheSame(
-            oldItem: Room,
-            newItem: Room
+            oldItem: HotelRoom,
+            newItem: HotelRoom
         ): Boolean {
             return oldItem == newItem
         }
@@ -43,7 +43,7 @@ class RoomAdapter(private val context: Context, private val children: List<Room>
      * Interface for any kind of listener event in recyclerView
      * */
     interface Interaction {
-        fun onRoomSelected(position: Int, item: Room)
+        fun onRoomSelected(position: Int, item: HotelRoom)
     }
 
     class NavigationOptionViewHolder(
@@ -66,7 +66,7 @@ class RoomAdapter(private val context: Context, private val children: List<Room>
         return children.size
     }
 
-    fun submitList(list: List<Room>) {
+    fun submitList(list: List<HotelRoom>) {
         differ.submitList(list)
     }
 
@@ -82,7 +82,7 @@ class RoomAdapter(private val context: Context, private val children: List<Room>
             adapter = DayWiseDetailsAdapter(item.hotels, this@HotelRoomAdapter)
             holder.itemDataBindingUtil.listSubCatItem.setRecycledViewPool(viewPool)
         }*/
-        /*val list: List<String> = listOf(*item.roomFacility.split(",").toTypedArray())
+        val list: List<String> = listOf(*item.RoomFacilities.split(",").toTypedArray())
         if(list.isNotEmpty()){
             val buttonLayoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -104,6 +104,6 @@ class RoomAdapter(private val context: Context, private val children: List<Room>
                 tv.setPadding(10, 10, 10, 10)
                 holder.itemDataBindingUtil.vContainer.addView(tv)
             }
-        }*/
+        }
     }
 }

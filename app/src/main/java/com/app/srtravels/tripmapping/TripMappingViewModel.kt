@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.app.srtravels.horizotalcalender.model.Calenders
-import com.app.srtravels.tripmapping.model.TripPackageMappingModel
+import com.app.srtravels.tripmapping.model.TripPackageMappingModelOrgi
 import com.google.gson.Gson
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.io.BufferedReader
@@ -24,11 +24,11 @@ class TripMappingViewModel@Inject constructor(
     var _calenderMutableData: MutableLiveData<MutableList<Calenders>> = MutableLiveData()
     val listCalenderData = mutableListOf<Calenders>()
 
-    fun getTripPackageMappingData(): TripPackageMappingModel {
+    fun getTripPackageMappingData(): TripPackageMappingModelOrgi {
         val gson = Gson()
         val i: InputStream = context.assets.open("packmapping.json")
         val br = BufferedReader(InputStreamReader(i))
-        val dataList: TripPackageMappingModel = gson.fromJson(br, TripPackageMappingModel::class.java)
+        val dataList: TripPackageMappingModelOrgi = gson.fromJson(br, TripPackageMappingModelOrgi::class.java)
         return dataList
     }
 

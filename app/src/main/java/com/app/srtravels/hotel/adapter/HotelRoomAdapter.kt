@@ -9,15 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
-import com.app.srtravels.databinding.RowRoomBinding
 import com.app.srtravels.databinding.RowRoomSelectionBinding
 import com.app.srtravels.hotel.model.Room
+import com.app.srtravels.tripmapping.model.HotelRoom
 
 class HotelRoomAdapter(private val context: Context, private val children: List<Room>,
                        private val interaction: Interaction,private val roomIds: List<Int>) :

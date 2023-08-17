@@ -1,21 +1,16 @@
 package com.app.srtravels.tripmapping.adapter
 
 import android.content.Context
-import android.graphics.Color
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowPlaceBinding
-import com.app.srtravels.databinding.RowRoomBinding
 import com.app.srtravels.tripmapping.model.Place
-import com.app.srtravels.tripmapping.model.Room
+
 
 class PlaceAdapter(private val context: Context, private val children: List<Place>, private val interaction: Interaction) :
     RecyclerView.Adapter<PlaceAdapter.NavigationOptionViewHolder>() {
@@ -26,7 +21,7 @@ class PlaceAdapter(private val context: Context, private val children: List<Plac
             oldItem: Place,
             newItem: Place
         ): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.PlaceGuid == newItem.PlaceGuid
         }
 
         override fun areContentsTheSame(

@@ -34,7 +34,7 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
             oldItem: Hotel,
             newItem: Hotel
         ): Boolean {
-            return oldItem.hotelName == newItem.hotelName
+            return oldItem.hotelId == newItem.hotelId
         }
 
         override fun areContentsTheSame(
@@ -84,7 +84,7 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
         holder.itemDataBindingUtil.position = position
         holder.itemDataBindingUtil.mRadioButton.setOnCheckedChangeListener(null)
 
-        if(selectedHotelID == item.hotelId) {
+        if(selectedHotelID.equals(item.hotelId)) {
             selectedItemPos = position
             lastItemSelectedPos = position
             //get the selected parent child ids, so that user can not select other parent child item

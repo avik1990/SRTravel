@@ -1,12 +1,10 @@
 package com.app.srtravels.tripmapping.model
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
-
-@Parcelize
 data class Place(
-    val id: Int,
-    val placeDesc: String,
-    val placeImages: List<String>,
-    val placeName: String
-): Parcelable
+    val DayPackGuid: String,
+    val DayPlaceGuid: String,
+    val PlaceDesc: String,
+    val PlaceGuid: String,
+    val PlaceImages: List<PlaceImage>,
+    val PlaceName: String
+)

@@ -10,11 +10,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
-import com.app.srtravels.databinding.RowPlaceBinding
 import com.app.srtravels.databinding.RowRouteHeaderBinding
 import com.app.srtravels.tripmapping.model.Car
-import com.app.srtravels.tripmapping.model.Place
 import com.app.srtravels.tripmapping.model.Route
+
 
 class RouteAdapter(private val context: Context, private val children: List<Route>,
                    private val interaction: Interaction) :
@@ -28,7 +27,7 @@ class RouteAdapter(private val context: Context, private val children: List<Rout
             oldItem: Route,
             newItem: Route
         ): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.RouteGuid == newItem.RouteGuid
         }
 
         override fun areContentsTheSame(
@@ -79,12 +78,12 @@ class RouteAdapter(private val context: Context, private val children: List<Rout
 
         holder.itemDataBindingUtil.listCar.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.listCar.context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = CarAdapter(context,item.car, this@RouteAdapter)
+            adapter = CarAdapter(context,item.Cars, this@RouteAdapter)
             holder.itemDataBindingUtil.listCar.setRecycledViewPool(viewPool)
         }
     }
 
     override fun onCarSelected(position: Int, item: Car) {
-        Toast.makeText(context,item.carOwnerName, Toast.LENGTH_LONG).show()
+        Toast.makeText(context,item.CarName, Toast.LENGTH_LONG).show()
     }
 }

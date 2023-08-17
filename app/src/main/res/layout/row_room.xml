@@ -4,7 +4,7 @@
     <data>
         <variable
             name="navigationItem"
-            type="com.app.srtravels.tripmapping.model.Room" />
+            type="com.app.srtravels.tripmapping.model.HotelRoom" />
 
         <variable
             name="position"
@@ -44,7 +44,7 @@
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@{navigationItem.roomName}"
+                    android:text="@{navigationItem.hotelRoomName}"
                     android:textSize="@dimen/_13sdp" />
 
                 <TextView
@@ -54,7 +54,7 @@
                     android:textColor="@color/colorPurple"
                     android:singleLine="true"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@{String.valueOf(navigationItem.roomWithACprice)}"
+                    android:text="@{String.valueOf(navigationItem.hotelRoomName)}"
                     android:textSize="@dimen/_10sdp" />
 
                 <TextView

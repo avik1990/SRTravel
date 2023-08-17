@@ -1,462 +1,568 @@
 {
-  "packageId": 134,
-  "packageName": "Flexi Package",
-  "packageStartDate": "18-04-2023",
-  "packageEndDate": "21-04-2023",
-  "packageDays": "3N/2D",
-  "packageOfferedPrice": 23000,
-  "packageDiscountedPrice": 20000,
-  "packageHotels": 2,
-  "packageCars": 3,
-  "packageThumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-  "Days": [
-    {
-      "dayName": "Day 1",
-      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "places": [
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Nandan",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Alipore Zoo",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ],
-      "routes": [
-        {
-          "routeName": "Airport to Ariport",
-          "car": [
-            {
-              "carOwnerName": "SRT Travels",
-              "carPrice": 12903,
-              "carContact": 9433435957,
-              "carType": "Hactback- 4 Seater"
-            }
-          ]
-        }
-      ],
-      "hotels": [
-        {
-          "hotelId": 133,
-          "hotelName": "Orchid",
-          "hotelRating": "5 Star",
-          "hotelLocation": "Shimla",
-          "hotelImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "rooms": [
-            {
-              "id": 3244,
-              "roomName": "Deluxe",
-              "roomWithACprice": 1200,
-              "roomWithOutAc": 100,
-              "roomWithDoubleBedPrice": 3000,
-              "roomWithSingleBed": 3000,
-              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-              "roomImages": [
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dayName": "Day 2",
-      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "places": [
-        {
-          "placeName": "Chapora Fort",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Agoda Fort",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Sandakfu",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ],
-      "routes": [
-        {
-          "routeName": "Airport to Ariport",
-          "car": [
-            {
-              "carOwnerName": "SRT Travels",
-              "carPrice": 12903,
-              "carContact": 9433435957,
-              "carType": "Hactback- 4 Seater"
-            },
-            {
-              "carOwnerName": "Tour & Travels",
-              "carPrice": 120,
-              "carContact": 9433435957,
-              "carType": "Hactback- 12 Seater"
-            }
-          ]
-        }
-      ],
-      "hotels": [
-        {
-          "hotelId": 134,
-          "hotelName": "Hyat",
-          "hotelRating": "5 Star",
-          "hotelLocation": "Shimla",
-          "hotelImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "rooms": [
-            {
-              "id": 32409,
-              "roomName": "Deluxe",
-              "roomWithACprice": 1200,
-              "roomWithOutAc": 100,
-              "roomWithDoubleBedPrice": 3000,
-              "roomWithSingleBed": 3000,
-              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-              "roomImages": [
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dayName": "Day 3",
-      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "places": [
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ],
-      "routes": [
-        {
-          "routeName": "Airport to Ariport",
-          "car": [
-            {
-              "carOwnerName": "SRT Travels",
-              "carPrice": 12903,
-              "carContact": 9433435957,
-              "carType": "Hactback- 4 Seater"
-            }
-          ]
-        }
-      ],
-      "hotels": [
-        {
-          "hotelId": 135,
-          "hotelName": "Orchid",
-          "hotelRating": "5 Star",
-          "hotelLocation": "Shimla",
-          "hotelImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "rooms": [
-            {
-              "id": 3244,
-              "roomName": "Deluxe",
-              "roomWithACprice": 1200,
-              "roomWithOutAc": 100,
-              "roomWithDoubleBedPrice": 3000,
-              "roomWithSingleBed": 3000,
-              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-              "roomImages": [
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dayName": "Day 4",
-      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "places": [
-        {
-          "placeName": "Agra Fort",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Taj Mahal",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ],
-      "routes": [
-        {
-          "routeName": "Airport to Ariport",
-          "car": [
-            {
-              "carOwnerName": "SRT Travels",
-              "carPrice": 12903,
-              "carContact": 9433435957,
-              "carType": "Hactback- 4 Seater"
-            }
-          ]
-        }
-      ],
-      "hotels": [
-        {
-          "hotelId": 135,
-          "hotelName": "Orchid",
-          "hotelRating": "5 Star",
-          "hotelLocation": "Shimla",
-          "hotelImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "rooms": [
-            {
-              "id": 39044,
-              "roomName": "Deluxe",
-              "roomWithACprice": 1200,
-              "roomWithOutAc": 100,
-              "roomWithDoubleBedPrice": 3000,
-              "roomWithSingleBed": 3000,
-              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-              "roomImages": [
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dayName": "Day 5",
-      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "places": [
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ],
-      "routes": [
-        {
-          "routeName": "Airport to Ariport",
-          "car": [
-            {
-              "carOwnerName": "SRT Travels",
-              "carPrice": 12903,
-              "carContact": 9433435957,
-              "carType": "Hactback- 4 Seater"
-            }
-          ]
-        }
-      ],
-      "hotels": [
-        {
-          "hotelId": 135,
-          "hotelName": "Orchid",
-          "hotelRating": "5 Star",
-          "hotelLocation": "Shimla",
-          "hotelImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "rooms": [
-            {
-              "id": 309876,
-              "roomName": "Deluxe",
-              "roomWithACprice": 1200,
-              "roomWithOutAc": 100,
-              "roomWithDoubleBedPrice": 3000,
-              "roomWithSingleBed": 3000,
-              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-              "roomImages": [
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dayName": "Day 6",
-      "dayDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "places": [
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "placeName": "Victoria",
-          "placeDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "placeImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ],
-      "routes": [
-        {
-          "routeName": "Airport to Ariport",
-          "car": [
-            {
-              "carOwnerName": "SRT Travels",
-              "carPrice": 12903,
-              "carContact": 9433435957,
-              "carType": "Hactback- 4 Seater"
-            }
-          ]
-        }
-      ],
-      "hotels": [
-        {
-          "hotelId": 135,
-          "hotelName": "Orchid",
-          "hotelRating": "5 Star",
-          "hotelLocation": "Shimla",
-          "hotelImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ],
-          "rooms": [
-            {
-              "id": 309876,
-              "roomName": "Deluxe",
-              "roomWithACprice": 1200,
-              "roomWithOutAc": 100,
-              "roomWithDoubleBedPrice": 3000,
-              "roomWithSingleBed": 3000,
-              "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-              "roomImages": [
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-                "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-
-  ]
+  "success": 1,
+  "data": {
+    "Day": [
+      {
+        "Hotel": [
+          {
+            "HotelGuid": "f267f2c2-380b-43d8-9a8d-fd895b5cc38b",
+            "HotelName": "Hotel Mon Valley",
+            "HotelRooms": [
+              {
+                "HotelRoomGuid": "f293a856-684e-4b95-a8ee-13d800f71cd2",
+                "HotelRoomName": "Double Ac",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Charging Points,Mini Fridge,Hairdryer,Toiletries,Towels,Smoke Alarm"
+              },
+              {
+                "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+                "HotelRoomName": "Deluxe",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Charging Points,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              }
+            ],
+            "DayPackGuid": "2c429104-23eb-43d9-befa-c13e1ba21da2",
+            "HotelImages": [
+              {
+                "HotelImages": "H1.jpg"
+              },
+              {
+                "HotelImages": "H2.jpg"
+              },
+              {
+                "HotelImages": "H3.jpg"
+              },
+              {
+                "HotelImages": "H4.jpg"
+              }
+            ],
+            "HotelRating": "5",
+            "DayHotelGuid": "7c7e58b6-1aa2-43b5-b27b-0056565df382",
+            "HotelLocation": "Tawang"
+          }
+        ],
+        "Place": [
+          {
+            "PlaceDesc": "A very small hill station cuddled in the lap of Himalayas in West Kameng district of Arunachal Pradesh, Bomdila is no less than a slice of paradise on earth bestowed with a pious aura of spirituality, peace and solace. ",
+            "PlaceGuid": "93848764-6b7b-4455-98f5-c7e7831bbb72",
+            "PlaceName": "Bomdila",
+            "DayPackGuid": "2c429104-23eb-43d9-befa-c13e1ba21da2",
+            "PlaceImages": [
+              {
+                "PlaceImage": "northeastindia11.jpg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "splendors14.jpg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "tawang1.jpg",
+                "PlaceImageDesc": "Erstwhile Tawang District was a Sub-Division of West Kameng District till 5th October 1984. This district is situated in western most part of Arunachal Pradesh. The area of this district is approximately 2,172 Sq.km, bounded by Tibet (China) to the north, Bhutan to the south-west and Sela ranges separated from West Kament district in the east."
+              },
+              {
+                "PlaceImage": "unexplored13.jpg",
+                "PlaceImageDesc": null
+              }
+            ],
+            "DayPlaceGuid": "da682c4b-e0e8-4efd-aa92-6c940b39eabf"
+          },
+          {
+            "PlaceDesc": "Snow-clad Himalayan ranges, a rustic charm and spirituality filled in the air; all these ingredients make Dirang a perfect hideout to spend some tranquil holidays in the lap of Mother Nature.",
+            "PlaceGuid": "1379cce0-32cf-4958-beb6-090a191fc0e0",
+            "PlaceName": "Dirang",
+            "DayPackGuid": "2c429104-23eb-43d9-befa-c13e1ba21da2",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Dirang1.jpeg",
+                "PlaceImageDesc": "Dirang is a village in the district of West Kameng in the Indian state of Arunachal Pradesh. Dirang is one of the 60 constituencies of Legislative Assembly of Arunachal Pradesh. Name of current MLA of this constituency is Phurpa Tsering."
+              },
+              {
+                "PlaceImage": "Dirang2.jpeg",
+                "PlaceImageDesc": "Dirang is a village in the district of West Kameng in the Indian state of Arunachal Pradesh. Dirang is one of the 60 constituencies of Legislative Assembly of Arunachal Pradesh. Name of current MLA of this constituency is Phurpa Tsering."
+              },
+              {
+                "PlaceImage": "Dirang3.jpeg",
+                "PlaceImageDesc": "Dirang is a village in the district of West Kameng in the Indian state of Arunachal Pradesh. Dirang is one of the 60 constituencies of Legislative Assembly of Arunachal Pradesh. Name of current MLA of this constituency is Phurpa Tsering."
+              },
+              {
+                "PlaceImage": "Dirang4.jpeg",
+                "PlaceImageDesc": "Dirang is a village in the district of West Kameng in the Indian state of Arunachal Pradesh. Dirang is one of the 60 constituencies of Legislative Assembly of Arunachal Pradesh. Name of current MLA of this constituency is Phurpa Tsering."
+              }
+            ],
+            "DayPlaceGuid": "2e23b8df-5d3a-4a31-8888-563a3fff88b5"
+          }
+        ],
+        "Route": [
+          {
+            "Cars": [
+              {
+                "CarGuid": "dad7c939-b62d-452d-b93c-959d94f572a0",
+                "CarName": "Micro",
+                "CarPrice": 2250,
+                "CarSeats": 4
+              }
+            ],
+            "RouteGuid": "1de758b7-41bb-45a1-b3e2-51a300d3c8fd",
+            "DayPackGuid": "2c429104-23eb-43d9-befa-c13e1ba21da2",
+            "DayRouteGuid": "4a7eb518-d080-43be-b7f7-ca3aacc340b1",
+            "RouteEndName": "Airport",
+            "RouteStartName": "Airport"
+          }
+        ],
+        "DayGuid": "2c429104-23eb-43d9-befa-c13e1ba21da2",
+        "DayName": "Day-1"
+      },
+      {
+        "Hotel": [
+          {
+            "HotelGuid": "bdd210c0-7504-4d64-8d29-5f8bfd34822c",
+            "HotelName": "Cygnett Inn Trendz",
+            "HotelRooms": [
+              {
+                "HotelRoomGuid": "f293a856-684e-4b95-a8ee-13d800f71cd2",
+                "HotelRoomName": "Double Ac",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Mini Fridge,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              },
+              {
+                "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+                "HotelRoomName": "Deluxe",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Mini Fridge,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              }
+            ],
+            "DayPackGuid": "d94656a0-7708-4fff-a952-3f8857f5a4ce",
+            "HotelImages": [
+              {
+                "HotelImages": "H11.jpg"
+              },
+              {
+                "HotelImages": "H12.jpg"
+              },
+              {
+                "HotelImages": "H13.jpg"
+              },
+              {
+                "HotelImages": "H14.jpg"
+              }
+            ],
+            "HotelRating": "3",
+            "DayHotelGuid": "38bf6f20-5f12-4c55-a705-04be0e699d01",
+            "HotelLocation": "Itanagar"
+          }
+        ],
+        "Place": [
+          {
+            "PlaceDesc": "Situated in the lap of majestic Himalayas and soaked in stupendous natural grandeur and a blissful weather all through the year, Itanagar is an enchanting tourist destination in North East India",
+            "PlaceGuid": "e8178be1-992a-4415-a89d-23ee47085943",
+            "PlaceName": "Itanagar",
+            "DayPackGuid": "d94656a0-7708-4fff-a952-3f8857f5a4ce",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Itanagar1.jpeg",
+                "PlaceImageDesc": "Itanagar is the capital of the northeast Indian state of Arunachal Pradesh. Set in the foothills of the Himalayas, the city is home to medieval Ita Fort and the Jawaharlal Nehru State Museum, which exhibits textiles and handicrafts. The nearby Gompa, a yellow-roofed Buddhist temple."
+              },
+              {
+                "PlaceImage": "Itanagar2.jpeg",
+                "PlaceImageDesc": "Itanagar is the capital of the northeast Indian state of Arunachal Pradesh. Set in the foothills of the Himalayas, the city is home to medieval Ita Fort and the Jawaharlal Nehru State Museum, which exhibits textiles and handicrafts. The nearby Gompa, a yellow-roofed Buddhist temple."
+              },
+              {
+                "PlaceImage": "Itanagar3.jpeg",
+                "PlaceImageDesc": "Itanagar is the capital of the northeast Indian state of Arunachal Pradesh. Set in the foothills of the Himalayas, the city is home to medieval Ita Fort and the Jawaharlal Nehru State Museum, which exhibits textiles and handicrafts. The nearby Gompa, a yellow-roofed Buddhist temple."
+              },
+              {
+                "PlaceImage": "Itanagar4.jpeg",
+                "PlaceImageDesc": "Itanagar is the capital of the northeast Indian state of Arunachal Pradesh. Set in the foothills of the Himalayas, the city is home to medieval Ita Fort and the Jawaharlal Nehru State Museum, which exhibits textiles and handicrafts. The nearby Gompa, a yellow-roofed Buddhist temple."
+              }
+            ],
+            "DayPlaceGuid": "5af2d207-40d2-4c5a-a005-6b088260d94e"
+          },
+          {
+            "PlaceDesc": "A small town nestled in the foothills of Himalayas in West Kameng district of Arunachal Pradesh, Bhalukpong is known for its breath-taking scenic beauty and serene and tranquil ambience which casts a spell on its every visitor. ",
+            "PlaceGuid": "a43392e5-8891-4748-a4fd-e0bcd8330f8f",
+            "PlaceName": "Bhalukpong",
+            "DayPackGuid": "d94656a0-7708-4fff-a952-3f8857f5a4ce",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Bhalukpong1.jpeg",
+                "PlaceImageDesc": "Bhalukpung is a small town located along the southern reaches of the Himalayas in West Kameng district of Arunachal Pradesh in India. The town is located at 213m above sea level, 100 km from Bomdila, 52 km from Tezpur and 5 km from Tipi. It lies along the Kameng river and is the headquarters of Bhalukpung circle."
+              },
+              {
+                "PlaceImage": "Bhalukpong2.jpeg",
+                "PlaceImageDesc": "Bhalukpung is a small town located along the southern reaches of the Himalayas in West Kameng district of Arunachal Pradesh in India. The town is located at 213m above sea level, 100 km from Bomdila, 52 km from Tezpur and 5 km from Tipi. It lies along the Kameng river and is the headquarters of Bhalukpung circle."
+              },
+              {
+                "PlaceImage": "Bhalukpong3.jpeg",
+                "PlaceImageDesc": "Bhalukpung is a small town located along the southern reaches of the Himalayas in West Kameng district of Arunachal Pradesh in India. The town is located at 213m above sea level, 100 km from Bomdila, 52 km from Tezpur and 5 km from Tipi. It lies along the Kameng river and is the headquarters of Bhalukpung circle."
+              },
+              {
+                "PlaceImage": "Bhalukpong4.jpeg",
+                "PlaceImageDesc": "Bhalukpung is a small town located along the southern reaches of the Himalayas in West Kameng district of Arunachal Pradesh in India. The town is located at 213m above sea level, 100 km from Bomdila, 52 km from Tezpur and 5 km from Tipi. It lies along the Kameng river and is the headquarters of Bhalukpung circle."
+              }
+            ],
+            "DayPlaceGuid": "9f4abd77-ae3d-4c90-9a1b-0403e624c5f6"
+          }
+        ],
+        "Route": [
+          {
+            "Cars": [
+              {
+                "CarGuid": "dad7c939-b62d-452d-b93c-959d94f572a0",
+                "CarName": "Micro",
+                "CarPrice": 2250,
+                "CarSeats": 4
+              }
+            ],
+            "RouteGuid": "1de758b7-41bb-45a1-b3e2-51a300d3c8fd",
+            "DayPackGuid": "d94656a0-7708-4fff-a952-3f8857f5a4ce",
+            "DayRouteGuid": "1f9622e1-6d0a-432a-8f15-ba059fc9e7ae",
+            "RouteEndName": "Airport",
+            "RouteStartName": "Airport"
+          }
+        ],
+        "DayGuid": "d94656a0-7708-4fff-a952-3f8857f5a4ce",
+        "DayName": "Day-2"
+      },
+      {
+        "Hotel": [
+          {
+            "HotelGuid": "f267f2c2-380b-43d8-9a8d-fd895b5cc38b",
+            "HotelName": "Hotel Mon Valley",
+            "HotelRooms": [
+              {
+                "HotelRoomGuid": "f293a856-684e-4b95-a8ee-13d800f71cd2",
+                "HotelRoomName": "Double Ac",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Charging Points,Mini Fridge,Hairdryer,Toiletries,Towels,Smoke Alarm"
+              },
+              {
+                "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+                "HotelRoomName": "Deluxe",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Charging Points,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              }
+            ],
+            "DayPackGuid": "da8c9955-7cd5-450d-90df-33fbaab4e228",
+            "HotelImages": [
+              {
+                "HotelImages": "H1.jpg"
+              },
+              {
+                "HotelImages": "H2.jpg"
+              },
+              {
+                "HotelImages": "H3.jpg"
+              },
+              {
+                "HotelImages": "H4.jpg"
+              }
+            ],
+            "HotelRating": "5",
+            "DayHotelGuid": "2d3393c4-6955-4a59-83bc-9316162876f9",
+            "HotelLocation": "Tawang"
+          }
+        ],
+        "Place": [
+          {
+            "PlaceDesc": "Tucked away in the forbidding mountain-scape of Arunachal Pradesh, Ziro Valley is an entrancing holiday destination in North East India which magnetizes everyone with its hypnotic natural",
+            "PlaceGuid": "e212902a-aa6d-4676-99e3-aece797fe4b0",
+            "PlaceName": "Ziro",
+            "DayPackGuid": "da8c9955-7cd5-450d-90df-33fbaab4e228",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Ziro1.jpeg",
+                "PlaceImageDesc": "Ziro is a town in and the district headquarters of the Lower Subansiri district in the Indian state of Arunachal Pradesh. It is included the Tentative List for UNESCO World Heritage Site for the Apatani cultural landscape."
+              },
+              {
+                "PlaceImage": "Ziro2.jpeg",
+                "PlaceImageDesc": "Ziro is a town in and the district headquarters of the Lower Subansiri district in the Indian state of Arunachal Pradesh. It is included the Tentative List for UNESCO World Heritage Site for the Apatani cultural landscape."
+              },
+              {
+                "PlaceImage": "Ziro3.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Ziro4.jpeg",
+                "PlaceImageDesc": null
+              }
+            ],
+            "DayPlaceGuid": "27e88ff7-56b8-4695-a24d-73cb485afd41"
+          }
+        ],
+        "Route": [
+          {
+            "Cars": [
+              {
+                "CarGuid": "dad7c939-b62d-452d-b93c-959d94f572a0",
+                "CarName": "Micro",
+                "CarPrice": 2250,
+                "CarSeats": 4
+              }
+            ],
+            "RouteGuid": "1de758b7-41bb-45a1-b3e2-51a300d3c8fd",
+            "DayPackGuid": "da8c9955-7cd5-450d-90df-33fbaab4e228",
+            "DayRouteGuid": "e1523d30-54a9-44ae-ae8b-2258f239d20a",
+            "RouteEndName": "Airport",
+            "RouteStartName": "Airport"
+          }
+        ],
+        "DayGuid": "da8c9955-7cd5-450d-90df-33fbaab4e228",
+        "DayName": "Day-3"
+      },
+      {
+        "Hotel": [
+          {
+            "HotelGuid": "aba6184b-ee46-4e87-a457-317a299158bb",
+            "HotelName": "Hotel Rising Sun",
+            "HotelRooms": [
+              {
+                "HotelRoomGuid": "f293a856-684e-4b95-a8ee-13d800f71cd2",
+                "HotelRoomName": "Double Ac",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Mini Fridge,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              },
+              {
+                "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+                "HotelRoomName": "Deluxe",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,Telephone,Air Condition,Charging Points,Mini Fridge,Blanket,Towels,Hot & Cold Water"
+              }
+            ],
+            "DayPackGuid": "0c0ccc98-5a70-4ee4-93d4-9b42375ccd36",
+            "HotelImages": [
+              {
+                "HotelImages": "H21.jpg"
+              },
+              {
+                "HotelImages": "H22.jpg"
+              },
+              {
+                "HotelImages": "H23.jpg"
+              },
+              {
+                "HotelImages": "H24.jpg"
+              }
+            ],
+            "HotelRating": "3",
+            "DayHotelGuid": "4f9be162-dde7-4600-a043-154b3e8ffba6",
+            "HotelLocation": "Bacha"
+          }
+        ],
+        "Place": [
+          {
+            "PlaceDesc": "Nestled in the lap of snow-clad Himalayan Ranges and blessed with breath-taking natural panoramas, Tawang is one tourism place in North East India",
+            "PlaceGuid": "cb879091-c0c7-4440-aa81-75a8a88c2b80",
+            "PlaceName": "Tawang",
+            "DayPackGuid": "0c0ccc98-5a70-4ee4-93d4-9b42375ccd36",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Tawang1.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Tawang2.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Tawang3.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Tawang4.jpeg",
+                "PlaceImageDesc": null
+              }
+            ],
+            "DayPlaceGuid": "c0e00060-b6d9-4a32-8852-ac104bdcdf27"
+          }
+        ],
+        "Route": [
+          {
+            "Cars": [
+              {
+                "CarGuid": "dad7c939-b62d-452d-b93c-959d94f572a0",
+                "CarName": "Micro",
+                "CarPrice": 2250,
+                "CarSeats": 4
+              }
+            ],
+            "RouteGuid": "1de758b7-41bb-45a1-b3e2-51a300d3c8fd",
+            "DayPackGuid": "0c0ccc98-5a70-4ee4-93d4-9b42375ccd36",
+            "DayRouteGuid": "6560686f-1fa6-4272-b595-55c5010f9f4b",
+            "RouteEndName": "Airport",
+            "RouteStartName": "Airport"
+          }
+        ],
+        "DayGuid": "0c0ccc98-5a70-4ee4-93d4-9b42375ccd36",
+        "DayName": "Day-4"
+      },
+      {
+        "Hotel": [
+          {
+            "HotelGuid": "f267f2c2-380b-43d8-9a8d-fd895b5cc38b",
+            "HotelName": "Hotel Mon Valley",
+            "HotelRooms": [
+              {
+                "HotelRoomGuid": "f293a856-684e-4b95-a8ee-13d800f71cd2",
+                "HotelRoomName": "Double Ac",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Charging Points,Mini Fridge,Hairdryer,Toiletries,Towels,Smoke Alarm"
+              },
+              {
+                "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+                "HotelRoomName": "Deluxe",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Charging Points,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              }
+            ],
+            "DayPackGuid": "ff3ee21d-94f0-4335-a46e-b16ec37f2690",
+            "HotelImages": [
+              {
+                "HotelImages": "H1.jpg"
+              },
+              {
+                "HotelImages": "H2.jpg"
+              },
+              {
+                "HotelImages": "H3.jpg"
+              },
+              {
+                "HotelImages": "H4.jpg"
+              }
+            ],
+            "HotelRating": "5",
+            "DayHotelGuid": "3c9cab45-f186-492c-a793-09e2f9ad0f04",
+            "HotelLocation": "Tawang"
+          }
+        ],
+        "Place": [
+          {
+            "PlaceDesc": "Nestled along the shores of beautiful Siong River, Pasighat sits as the â€˜Gateway to Arunachal Pradeshâ€™ and calls for uncountable nature lovers and adventure",
+            "PlaceGuid": "cdbdc69e-9707-40ce-8a57-44ac6d2ed8a8",
+            "PlaceName": "Pasighat",
+            "DayPackGuid": "ff3ee21d-94f0-4335-a46e-b16ec37f2690",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Pasighat1.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Pasighat2.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Pasighat3.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Pasighat4.jpeg",
+                "PlaceImageDesc": null
+              }
+            ],
+            "DayPlaceGuid": "942ba983-3e51-461d-87b3-0cf00b4a3f17"
+          }
+        ],
+        "Route": [
+          {
+            "Cars": [
+              {
+                "CarGuid": "dad7c939-b62d-452d-b93c-959d94f572a0",
+                "CarName": "Micro",
+                "CarPrice": 2250,
+                "CarSeats": 4
+              }
+            ],
+            "RouteGuid": "1de758b7-41bb-45a1-b3e2-51a300d3c8fd",
+            "DayPackGuid": "ff3ee21d-94f0-4335-a46e-b16ec37f2690",
+            "DayRouteGuid": "5d8ab34f-28a4-414a-a3ed-d9c12932c892",
+            "RouteEndName": "Airport",
+            "RouteStartName": "Airport"
+          }
+        ],
+        "DayGuid": "ff3ee21d-94f0-4335-a46e-b16ec37f2690",
+        "DayName": "Day-5"
+      },
+      {
+        "Hotel": [
+          {
+            "HotelGuid": "aba6184b-ee46-4e87-a457-317a299158bb",
+            "HotelName": "Hotel Rising Sun",
+            "HotelRooms": [
+              {
+                "HotelRoomGuid": "f293a856-684e-4b95-a8ee-13d800f71cd2",
+                "HotelRoomName": "Double Ac",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Mini Fridge,Blanket,Hairdryer,Toiletries,Towels,Hot & Cold Water,Smoke Alarm"
+              },
+              {
+                "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+                "HotelRoomName": "Deluxe",
+                "RoomFacilities": "Free Wi-Fi,Electric Kettle,Telephone,Air Condition,Charging Points,Mini Fridge,Blanket,Towels,Hot & Cold Water"
+              }
+            ],
+            "DayPackGuid": "2c88ee68-1960-4d4e-90a9-58ac7585562b",
+            "HotelImages": [
+              {
+                "HotelImages": "H21.jpg"
+              },
+              {
+                "HotelImages": "H22.jpg"
+              },
+              {
+                "HotelImages": "H23.jpg"
+              },
+              {
+                "HotelImages": "H24.jpg"
+              }
+            ],
+            "HotelRating": "3",
+            "DayHotelGuid": "b516890e-5221-49d0-bf51-5a38e7616ef2",
+            "HotelLocation": "Bacha"
+          }
+        ],
+        "Place": [
+          {
+            "PlaceDesc": "Nestled on the shores of the beautiful Subansiri River, Daporijo, blessed with an aesthetic natural splendour of bamboo rainforests, lush paddy fields and enchanting waterfalls",
+            "PlaceGuid": "798a3ca7-1e41-4fb7-bfaf-02e724b4a853",
+            "PlaceName": "Daporijo",
+            "DayPackGuid": "2c88ee68-1960-4d4e-90a9-58ac7585562b",
+            "PlaceImages": [
+              {
+                "PlaceImage": "Daporijo1.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Daporijo2.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Daporijo3.jpeg",
+                "PlaceImageDesc": null
+              },
+              {
+                "PlaceImage": "Daporijo4.jpeg",
+                "PlaceImageDesc": null
+              }
+            ],
+            "DayPlaceGuid": "f6426cf4-7e3b-46cb-bfe4-5cd5e3e4d34e"
+          }
+        ],
+        "Route": [
+          {
+            "Cars": [
+              {
+                "CarGuid": "dad7c939-b62d-452d-b93c-959d94f572a0",
+                "CarName": "Micro",
+                "CarPrice": 2250,
+                "CarSeats": 4
+              }
+            ],
+            "RouteGuid": "1de758b7-41bb-45a1-b3e2-51a300d3c8fd",
+            "DayPackGuid": "2c88ee68-1960-4d4e-90a9-58ac7585562b",
+            "DayRouteGuid": "ffa99545-9354-47f3-9ebc-7f82952d8e68",
+            "RouteEndName": "Airport",
+            "RouteStartName": "Airport"
+          }
+        ],
+        "DayGuid": "2c88ee68-1960-4d4e-90a9-58ac7585562b",
+        "DayName": "Day-6"
+      }
+    ],
+    "PackageDays": 6,
+    "PackageName": "6D/5N",
+    "PackageNights": 5,
+    "PackageEndDate": null,
+    "PackageStartDate": null,
+    "PackageOfferedPrice": null,
+    "packageDiscountedPrice": null
+  }
 }

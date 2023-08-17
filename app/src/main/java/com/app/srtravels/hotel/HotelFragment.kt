@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.srtravels.databinding.FragmentHotelBinding
 import com.app.srtravels.hotel.adapter.HotelAdapter
+import com.app.srtravels.hotel.model.Hotel
 import com.app.srtravels.hotel.model.HotelModels
-import com.app.srtravels.tripmapping.model.Hotel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,7 +38,7 @@ class HotelFragment : Fragment(), HotelAdapter.Interaction {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[HotelViewModel::class.java]
-        hotel = HotelFragmentArgs.fromBundle(requireArguments()).hotel
+        //hotel = HotelFragmentArgs.fromBundle(requireArguments()).hotel
         prepareMovieContentData(viewModel.getHotelData())
     }
 

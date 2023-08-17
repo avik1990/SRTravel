@@ -25,47 +25,34 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_90sdp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/movieBanner"
-                    android:layout_width="@dimen/_100sdp"
+                    android:layout_width="@dimen/_80sdp"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="fitXY"
                     android:layout_margin="@dimen/_5sdp"
                     app:shapeAppearanceOverlay="@style/RoundedSquare"
-                    android:layout_height="@dimen/_100sdp"/>
+                    android:layout_height="@dimen/_80sdp"/>
 
-                <TextView
-                    android:id="@+id/change"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
-                    android:singleLine="true"
-                    android:onClick="@{()->clickEvent.onHotelSelected(position,navigationItem)}"
-                    android:fontFamily="@font/roboto_bold"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:text="Change"
-                    android:textSize="@dimen/_13sdp" />
             </LinearLayout>
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/movieTitle"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/hotelName"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="@dimen/_5sdp"
@@ -73,28 +60,45 @@
                     android:textSize="@dimen/_13sdp" />
 
                 <TextView
-                    android:id="@+id/pckPrice"
+                    android:id="@+id/hotelLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/hotelName"
+                    android:fontFamily="@font/roboto_regular"
                     android:singleLine="true"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="@{navigationItem.hotelLocation}"
                     android:textSize="@dimen/_10sdp" />
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"
+                    android:onClick="@{()->clickEvent.onHotelSelected(position,navigationItem)}"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:text="Change Hotel"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
-            android:text="Rooms"
+            android:text="Room"
             android:textSize="@dimen/_12sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_bold"
             android:textColor="@color/black"
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/roomListView"
             android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 </layout>

@@ -1,21 +1,16 @@
 package com.app.srtravels.tripmapping.adapter
 
 import android.content.Context
-import android.graphics.Color
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowCarsBinding
-import com.app.srtravels.databinding.RowRoomBinding
 import com.app.srtravels.tripmapping.model.Car
-import com.app.srtravels.tripmapping.model.Room
+
 
 class CarAdapter(private val context: Context, private val children: List<Car>, private val interaction: Interaction) :
     RecyclerView.Adapter<CarAdapter.NavigationOptionViewHolder>() {
@@ -29,7 +24,7 @@ class CarAdapter(private val context: Context, private val children: List<Car>, 
             oldItem: Car,
             newItem: Car
         ): Boolean {
-            return oldItem.carOwnerName == newItem.carOwnerName
+            return oldItem.CarGuid == newItem.CarGuid
         }
 
         override fun areContentsTheSame(

@@ -31,7 +31,7 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
             oldItem: Day,
             newItem: Day
         ): Boolean {
-            return oldItem.dayName == newItem.dayName
+            return oldItem.DayGuid == newItem.DayGuid
         }
 
         override fun areContentsTheSame(
@@ -44,9 +44,6 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
 
     private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
 
-    /**
-     * Interface for any kind of listener event in recyclerView
-     * */
     interface Interaction {
         fun onHotelChangeItem(position: Int, item: Hotel)
     }
@@ -76,7 +73,6 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
 
     override fun onBindViewHolder(holder: NavigationOptionViewHolder, position: Int) {
         val item = differ.currentList[position]
-        //holder.setIsRecyclable(false)
         holder.itemDataBindingUtil.navigationItem = item
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
@@ -84,29 +80,26 @@ class HeaderDayAdapter(private val context: Context, private val interaction: In
 
         holder.itemDataBindingUtil.listSubCatItem.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.listSubCatItem.context, LinearLayoutManager.VERTICAL, false)
-            adapter = DayWiseDetailsAdapter(context,item.hotels, this@HeaderDayAdapter)
-           // holder.itemDataBindingUtil.listSubCatItem.setRecycledViewPool(viewPool)
+            adapter = DayWiseDetailsAdapter(context,item.Hotel, this@HeaderDayAdapter)
         }
 
         holder.itemDataBindingUtil.placeListView.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.placeListView.context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = PlaceAdapter(context,item.places, this@HeaderDayAdapter)
-           // holder.itemDataBindingUtil.placeListView.setRecycledViewPool(viewPool)
+            adapter = PlaceAdapter(context,item.Place, this@HeaderDayAdapter)
         }
 
         holder.itemDataBindingUtil.carListView.apply {
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.carListView.context, LinearLayoutManager.HORIZONTAL, false)
-            adapter = RouteAdapter(context,item.routes, this@HeaderDayAdapter)
-         //   holder.itemDataBindingUtil.carListView.setRecycledViewPool(viewPool)
+            adapter = RouteAdapter(context,item.Route, this@HeaderDayAdapter)
         }
     }
 
     override fun onPlaceSelected(position: Int, item: Place) {
-        Toast.makeText(context,item.placeName,Toast.LENGTH_LONG).show()
+        Toast.makeText(context,item.PlaceName,Toast.LENGTH_LONG).show()
     }
 
     override fun onRouteSelected(position: Int, item: Route) {
-        Toast.makeText(context,item.routeName,Toast.LENGTH_LONG).show()
+        Toast.makeText(context,item.RouteStartName,Toast.LENGTH_LONG).show()
     }
 
     override fun onHotelSelected(position: Int, item: Hotel) {

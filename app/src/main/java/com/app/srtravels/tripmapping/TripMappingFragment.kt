@@ -5,15 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.MainActivity
-import com.app.srtravels.R
 import com.app.srtravels.bookinginputs.model.BookingInputs
 import com.app.srtravels.databinding.FragmentTripMappingBinding
 import com.app.srtravels.horizotalcalender.adapter.CalanderAdapter
@@ -93,7 +90,7 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
             calenderAdapter.notifyDataSetChanged()
         }
 
-        prepareMovieContentData(viewModel.getTripPackageMappingData().Days)
+        prepareMovieContentData(viewModel.getTripPackageMappingData().data.Day)
     }
 
     private fun prepareMovieContentData(dataList: List<Day>) {
@@ -130,7 +127,7 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
                             calenderAdapter.notifyItemChanged(previousSelect)
                         }
                         previousSelect = firstVisibleItemPosition
-                        Log.d("RecyclerView", "Item at position $firstVisibleItemPosition is not at the top")
+                        //Log.d("RecyclerView", "Item at position $firstVisibleItemPosition is not at the top")
                     }
 
                     currentItemPosition = firstVisibleItemPosition

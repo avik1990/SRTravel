@@ -1,6 +1,7 @@
 package com.app.srtravels.tripmapping.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -12,13 +13,13 @@ import coil.size.Scale
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowHotelBinding
 import com.app.srtravels.tripmapping.model.Hotel
-import com.app.srtravels.tripmapping.model.Room
+import com.app.srtravels.tripmapping.model.HotelRoom
+import com.app.srtravels.util.IMAGE_PATH_URL
 
-class DayWiseDetailsAdapter(private val context: Context,private val children: List<Hotel>,
+class DayWiseDetailsAdapter(private val context: Context, private val children: List<Hotel>,
                             private val interaction: Interaction) :
     RecyclerView.Adapter<DayWiseDetailsAdapter.ViewHolder>(), RoomAdapter.Interaction {
 
-   // private val viewPool = RecyclerView.RecycledViewPool()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemDatabinding = DataBindingUtil.inflate<RowHotelBinding>(LayoutInflater.from(parent.context),
@@ -38,8 +39,9 @@ class DayWiseDetailsAdapter(private val context: Context,private val children: L
         holder.itemDataBindingUtil.navigationItem = child
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
+        Log.e("HotelImages==============", IMAGE_PATH_URL+child.HotelImages[0].HotelImages)
 
-        holder.itemDataBindingUtil.movieBanner.load(child.hotelImages[0]) {
+        holder.itemDataBindingUtil.movieBanner.load( IMAGE_PATH_URL+child.HotelImages[0].HotelImages) {
             scale(Scale.FILL)
         }
 
@@ -49,10 +51,8 @@ class DayWiseDetailsAdapter(private val context: Context,private val children: L
                     LinearLayoutManager.VERTICAL,
                     false
                 )
-                adapter = RoomAdapter(context, child.rooms, this@DayWiseDetailsAdapter)
-               // holder.itemDataBindingUtil.roomListView.setRecycledViewPool(viewPool)
+                adapter = RoomAdapter(context, child.HotelRooms, this@DayWiseDetailsAdapter)
             }
-
     }
 
     interface Interaction {
@@ -65,7 +65,7 @@ class DayWiseDetailsAdapter(private val context: Context,private val children: L
     ) :
         RecyclerView.ViewHolder(itemDataBindingUtil.root)
 
-    override fun onRoomSelected(position: Int, item: Room) {
-        Toast.makeText(context,item.roomName, Toast.LENGTH_LONG).show()
+    override fun onRoomSelected(position: Int, item: HotelRoom) {
+        Toast.makeText(context,item.HotelRoomName, Toast.LENGTH_LONG).show()
     }
 }
