@@ -39,7 +39,6 @@ class DayWiseDetailsAdapter(private val context: Context, private val children: 
         holder.itemDataBindingUtil.navigationItem = child
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
-        Log.e("HotelImages==============", IMAGE_PATH_URL+child.HotelImages[0].HotelImages)
 
         holder.itemDataBindingUtil.movieBanner.load( IMAGE_PATH_URL+child.HotelImages[0].HotelImages) {
             scale(Scale.FILL)

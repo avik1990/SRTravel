@@ -1,4 +1,4 @@
-package com.app.srtravels.hotel.adapter
+package com.app.srtravels.tripmapping.module.hotel.adapter
 
 import android.content.Context
 import android.util.Log
@@ -14,15 +14,16 @@ import coil.load
 import coil.size.Scale
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowHotelSelectionBinding
-import com.app.srtravels.hotel.model.Hotel
-import com.app.srtravels.hotel.model.Room
+import com.app.srtravels.tripmapping.module.hotel.model1.Hotel
+import com.app.srtravels.tripmapping.module.hotel.model1.HotelRoom
+import com.app.srtravels.util.IMAGE_PATH_URL
 
-class HotelAdapter(private val context: Context, private var selectedHotelID: Int, private val interaction: Interaction) :
-    RecyclerView.Adapter<HotelAdapter.NavigationOptionViewHolder>(),HotelRoomAdapter.Interaction {
+class HotelAdapter(private val context: Context, private var selectedHotelID: String, private val interaction: Interaction) :
+    RecyclerView.Adapter<HotelAdapter.NavigationOptionViewHolder>(), HotelRoomAdapter.Interaction {
 
     var selectedItemPos = -1
     var lastItemSelectedPos = -1
-    var roomForHotel: MutableList<Int> = mutableListOf<Int>()
+    var roomForHotel: MutableList<String> = mutableListOf<String>()
 
 
 
@@ -34,7 +35,7 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
             oldItem: Hotel,
             newItem: Hotel
         ): Boolean {
-            return oldItem.hotelId == newItem.hotelId
+            return oldItem.HotelGuid == newItem.HotelGuid
         }
 
         override fun areContentsTheSame(
@@ -52,7 +53,9 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
      * */
     interface Interaction {
         fun onItemHotelSelected(position: Int, item: Hotel)
+        fun onItemHotelRoomSelected(position: Int, item: HotelRoom)
     }
+
 
     class NavigationOptionViewHolder(
         val itemDataBindingUtil: RowHotelSelectionBinding,
@@ -82,35 +85,39 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
         holder.itemDataBindingUtil.navigationItem = item
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
-        holder.itemDataBindingUtil.mRadioButton.setOnCheckedChangeListener(null)
+        holder.itemDataBindingUtil.mSelectHotel.setOnCheckedChangeListener(null)
 
-        if(selectedHotelID.equals(item.hotelId)) {
+        Log.e("selectedHotelID",selectedHotelID)
+        Log.e("selectedHotelID--",item.HotelGuid)
+
+        if(selectedHotelID.equals(item.HotelGuid)) {
             selectedItemPos = position
             lastItemSelectedPos = position
             //get the selected parent child ids, so that user can not select other parent child item
             roomForHotel.clear()
-            for(i in 0 until item.rooms.size){
-                roomForHotel.add(item.rooms[i].roomId)
+            for(i in 0 until item.HotelRooms.size){
+                roomForHotel.add(item.HotelRooms[i].HotelRoomGuid)
             }
         }
 
         if(position == selectedItemPos) {
-            holder.itemDataBindingUtil.mRadioButton.isChecked = true
-            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.colorAccent)
+            holder.itemDataBindingUtil.mSelectHotel.isChecked = true
+            holder.itemDataBindingUtil.container.setBackgroundResource(R.drawable.rounded_selected_blue)
+            holder.itemDataBindingUtil.mSelectHotel.text = "Selected Hotel"
         } else {
-            holder.itemDataBindingUtil.mRadioButton.isChecked = false
+            holder.itemDataBindingUtil.mSelectHotel.isChecked = false
             holder.itemDataBindingUtil.container.setBackgroundResource(R.color.white)
+            holder.itemDataBindingUtil.mSelectHotel.text = "Select Hotel"
         }
 
-        holder.itemDataBindingUtil.mRadioButton.setOnCheckedChangeListener { _, _ ->
+        holder.itemDataBindingUtil.mSelectHotel.setOnCheckedChangeListener { _, _ ->
             selectedItemPos = position
-            selectedHotelID = item.hotelId
+            selectedHotelID = item.HotelGuid
             //get the selected parent child ids, so that user can not select other parent child item
             roomForHotel.clear()
-            for(i in 0 until item.rooms.size){
-                roomForHotel.add(item.rooms[i].roomId)
+            for(i in 0 until item.HotelRooms.size){
+                roomForHotel.add(item.HotelRooms[i].HotelRoomGuid)
             }
-
             lastItemSelectedPos = if(lastItemSelectedPos == -1)
                 selectedItemPos
             else {
@@ -120,17 +127,13 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
             notifyItemChanged(selectedItemPos)
         }
 
-        holder.itemDataBindingUtil.hotelBanner.load(item?.hotelImages?.get(0)) {
+        holder.itemDataBindingUtil.hotelBanner.load(IMAGE_PATH_URL + item?.HotelImages?.get(0)?.HotelImages) {
             scale(Scale.FILL)
         }
 
         holder.itemDataBindingUtil.roomListView.apply {
-            Toast.makeText(context,item.rooms.toString(),Toast.LENGTH_SHORT).show()
-            Log.e("ROOMS",item.rooms.toString())
-
             layoutManager = LinearLayoutManager(holder.itemDataBindingUtil.roomListView.context, LinearLayoutManager.VERTICAL, false)
-            adapter = HotelRoomAdapter(context,item.rooms, this@HotelAdapter, roomForHotel)
-            holder.itemDataBindingUtil.roomListView.setRecycledViewPool(viewPool)
+            adapter = HotelRoomAdapter(context,item.HotelRooms, this@HotelAdapter, roomForHotel)
         }
     }
 
@@ -140,7 +143,9 @@ class HotelAdapter(private val context: Context, private var selectedHotelID: In
     ) :
         RecyclerView.ViewHolder(itemDataBindingUtil.root)
 
-    override fun onRoomSelected(position: Int, item: Room) {
-        Toast.makeText(context,item.roomName,Toast.LENGTH_SHORT).show()
+    override fun onRoomSelected(position: Int, item: HotelRoom) {
+        Toast.makeText(context,item.HotelRoomName,Toast.LENGTH_SHORT).show()
+        interaction.onItemHotelRoomSelected(position,item)
+
     }
 }

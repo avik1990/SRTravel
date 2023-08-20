@@ -18,15 +18,14 @@ import com.app.srtravels.horizotalcalender.model.Calenders
 import com.app.srtravels.tripmapping.adapter.HeaderDayAdapter
 import com.app.srtravels.tripmapping.model.Day
 import com.app.srtravels.tripmapping.model.Hotel
+import com.app.srtravels.util.MAX_ADULT_PERSON_PER_ROOM
 import com.app.srtravels.util.getFormattedDate_YYYYMMDD
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderAdapter.Interaction  {
 
-     var bookingInputs: BookingInputs? = null
-     //val sharedViewModel: SharedViewModel by activityViewModels()
-   //  lateinit var  horizontalCalenderFragment : HorizontalCalender
+    var bookingInputs: BookingInputs? = null
     private lateinit var linearLayoutManager: LinearLayoutManager
 
     companion object {
@@ -37,10 +36,8 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
     private var _binding: FragmentTripMappingBinding? = null
     private var previousSelect = 0
     private val binding get() = _binding!!
-
     private lateinit var contentadapter: HeaderDayAdapter
     private lateinit var calenderAdapter: CalanderAdapter
-
     private var startDate :String = ""
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,19 +47,7 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
             (requireActivity() as MainActivity).binding.topBar.headerTitle.text = it?.destination
             var inputs = "From "+it?.startDate +" || "+it?.noOfAdults.toString() +"Adults(s) || "+ it?.noOfChilds.toString() +"Child(s)"
             (requireActivity() as MainActivity).binding.topBar.subText.text = inputs
-            startDate= it?.startDate!!
-        /*    //Pass data to Calender Fragment
-            horizontalCalenderFragment = HorizontalCalender()
-            val bundle = Bundle()
-            horizontalCalenderFragment.listener = this
-            bundle.putString( "startDate",it?.startDate)
-            bundle.putInt( "days",5)
-            horizontalCalenderFragment.arguments = bundle
-            childFragmentManager.beginTransaction()
-                .replace(R.id.trip_date_calender, horizontalCalenderFragment)
-                .commit()*/
-            ////////////
-
+            startDate = it?.startDate!!
         }
     }
 
@@ -79,7 +64,7 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
         viewModel = ViewModelProvider(this)[TripMappingViewModel::class.java]
         viewModel.getTripPackageMappingData()
 
-        ////for calender
+        ////for Calender
         viewModel.generateCalenderDates(getFormattedDate_YYYYMMDD(startDate) ,6)
         viewModel._calenderMutableData.observe(requireActivity()) { it ->
             linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -89,7 +74,6 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
             calenderAdapter.submitList(it)
             calenderAdapter.notifyDataSetChanged()
         }
-
         prepareMovieContentData(viewModel.getTripPackageMappingData().data.Day)
     }
 
@@ -101,7 +85,7 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
         contentadapter.submitList(dataList)
         contentadapter.notifyDataSetChanged()
 
-        ////
+        ////Get the first element visible in the screen while scroll in recyclerview
         var currentItemPosition = RecyclerView.NO_POSITION
         binding?.recyclerMain?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -127,40 +111,26 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
                             calenderAdapter.notifyItemChanged(previousSelect)
                         }
                         previousSelect = firstVisibleItemPosition
-                        //Log.d("RecyclerView", "Item at position $firstVisibleItemPosition is not at the top")
                     }
-
                     currentItemPosition = firstVisibleItemPosition
                 }
             }
         })
-
     }
-
 
     override fun onHotelChangeItem(position: Int, item: Hotel) {
-        val action = TripMappingFragmentDirections.actionTripMappingFragmentToHotelFragment(item)
+        val action = TripMappingFragmentDirections.actionTripMappingFragmentToHotelFragment(item.HotelGuid)
         findNavController().navigate(action)
     }
-
-    /*override fun onCalenderItemSelected(position: Int, item: Calenders) {
-        Toast.makeText(requireContext(), item.toString(), Toast.LENGTH_SHORT).show()
-        (_binding?.recyclerMain?.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
-            position,
-            0
-        )
-    }*/
 
     override fun onItemSelected(position: Int, item: Calenders) {
         if (previousSelect != position) {
             calenderAdapter.currentItemSelected = position
             calenderAdapter.notifyItemChanged(position)
             calenderAdapter.notifyItemChanged(previousSelect)
-           // listener?.onCalenderItemSelected(position, item)
             (_binding?.recyclerMain?.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(
                 position,
-                0
-            )
+                0)
         }
         previousSelect = position
     }

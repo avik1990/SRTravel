@@ -4,7 +4,7 @@
     <data>
         <variable
             name="navigationItem"
-            type="com.app.srtravels.hotel.model.Room" />
+            type="com.app.srtravels.tripmapping.module.hotel.model1.HotelRoom" />
         <variable
             name="position"
             type="Integer" />
@@ -13,20 +13,22 @@
             type="Boolean" />
         <variable
             name="clickEvent"
-            type="com.app.srtravels.hotel.adapter.HotelRoomAdapter.Interaction"/>
+            type="com.app.srtravels.tripmapping.module.hotel.adapter.HotelRoomAdapter.Interaction"/>
     </data>
 
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="@color/gray"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/rounded_grey"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/subContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{()->clickEvent.onRoomSelected(position,navigationItem)}"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -39,26 +41,28 @@
                     android:id="@+id/movieTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@{navigationItem.roomName}"
+                    android:text="@{navigationItem.hotelRoomName}"
                     android:textSize="@dimen/_13sdp" />
 
                 <TextView
                     android:id="@+id/pckPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
                     android:singleLine="true"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@{String.valueOf(navigationItem.roomWithACprice)}"
+                    android:text="@{String.valueOf(navigationItem.hotelRoomName)}"
                     android:textSize="@dimen/_10sdp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:text="@string/room_facilities"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="@color/black"
                     android:layout_height="wrap_content"/>
 
@@ -77,7 +81,9 @@
             android:id="@+id/mSelectRoom"
             android:layout_width="wrap_content"
             android:text="Select Room"
-            android:padding="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:onClick="@{()->clickEvent.onRoomSelected(position,navigationItem)}"
+            android:textSize="@dimen/_9sdp"
             android:elevation="@dimen/_4sdp"
             android:layout_margin="@dimen/_4sdp"
             android:button="@android:color/transparent"

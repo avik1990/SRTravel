@@ -5,7 +5,6 @@
         <variable
             name="navigationItem"
             type="com.app.srtravels.tripmapping.model.HotelRoom" />
-
         <variable
             name="position"
             type="Integer" />
@@ -17,11 +16,11 @@
             type="com.app.srtravels.tripmapping.adapter.RoomAdapter.Interaction"/>
     </data>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="@color/gray"
+        android:background="@drawable/rounded_grey"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -40,7 +39,7 @@
                     android:id="@+id/movieTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="@dimen/_5sdp"
@@ -51,9 +50,9 @@
                     android:id="@+id/pckPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
                     android:singleLine="true"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:text="@{String.valueOf(navigationItem.hotelRoomName)}"
                     android:textSize="@dimen/_10sdp" />
 
@@ -61,6 +60,7 @@
                     android:layout_width="match_parent"
                     android:text="@string/room_facilities"
                     android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
                     android:layout_height="wrap_content"/>
 
                     <com.google.android.flexbox.FlexboxLayout
@@ -79,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPurple"
+            android:visibility="gone"
             android:singleLine="true"
             android:fontFamily="@font/roboto_bold"
             android:layout_marginTop="@dimen/_5sdp"

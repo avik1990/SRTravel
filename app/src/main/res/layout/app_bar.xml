@@ -7,56 +7,67 @@
     tools:context=".MainActivity"
     android:background="@color/white">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="2dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:stateListAnimator="@animator/appbar_elevation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        app:cardUseCompatPadding="true">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.AppBarLayout
+            android:stateListAnimator="@animator/appbar_elevation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            android:background="@color/white"
-            android:minHeight="?attr/actionBarSize">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/baseline_keyboard_backspace_24"
-                android:padding="@dimen/_5sdp"
-                android:id="@+id/circle_imageView"/>
-
-            <LinearLayout
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize">
 
-                <TextView
-                    android:id="@+id/headerTitle"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/trips"
-                    android:textSize="@dimen/_14sdp"
-                    android:gravity="center_vertical"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="@dimen/_6sdp" />
+                    android:src="@drawable/baseline_keyboard_backspace_24"
+                    android:padding="@dimen/_5sdp"
+                    android:id="@+id/circle_imageView"/>
 
-                <TextView
-                    android:id="@+id/subText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Customize your trip"
-                    android:textSize="@dimen/_10sdp"
-                    android:gravity="center_vertical"
-                    android:maxLines="1"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="@dimen/_6sdp" />
-            </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/headerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trips"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/_6sdp" />
+
+                    <TextView
+                        android:id="@+id/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customize your trip"
+                        android:textSize="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/_6sdp" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

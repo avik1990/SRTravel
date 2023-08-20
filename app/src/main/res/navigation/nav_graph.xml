@@ -71,12 +71,12 @@
     </fragment>
     <fragment
         android:id="@+id/hotelFragment"
-        android:name="com.app.srtravels.hotel.HotelFragment"
+        android:name="com.app.srtravels.tripmapping.module.hotel.HotelFragment"
         android:label="fragment_hotel"
         tools:layout="@layout/fragment_hotel" >
         <argument
-            android:name="hotel"
-            app:argType="com.app.srtravels.tripmapping.model.Hotel" />
+            android:name="hotelGuid"
+            app:argType="string" />
     </fragment>
 
 

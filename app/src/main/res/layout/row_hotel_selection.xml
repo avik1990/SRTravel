@@ -4,7 +4,7 @@
     <data>
         <variable
             name="navigationItem"
-            type="com.app.srtravels.hotel.model.Hotel" />
+            type="com.app.srtravels.tripmapping.module.hotel.model1.Hotel" />
         <variable
             name="position"
             type="Integer" />
@@ -13,35 +13,34 @@
             type="Boolean" />
         <variable
             name="clickEvent"
-            type="com.app.srtravels.hotel.adapter.HotelAdapter.Interaction"/>
+            type="com.app.srtravels.tripmapping.module.hotel.adapter.HotelAdapter.Interaction"/>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:layout_margin="@dimen/_5sdp"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{()->clickEvent.onItemHotelSelected(position,navigationItem)}"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/hotelBanner"
-                    android:layout_width="@dimen/_100sdp"
+                    android:layout_width="@dimen/_80sdp"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="fitXY"
                     android:layout_margin="@dimen/_5sdp"
                     app:shapeAppearanceOverlay="@style/RoundedSquare"
-                    android:layout_height="@dimen/_100sdp"/>
+                    android:layout_height="@dimen/_80sdp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,33 +48,34 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/movieTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
                     android:singleLine="true"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:text="@{String.valueOf(navigationItem.hotelId)}"
+                    android:text="@{String.valueOf(navigationItem.hotelName)}"
                     android:textSize="@dimen/_13sdp" />
 
                 <TextView
                     android:id="@+id/pckPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPurple"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
                     android:singleLine="true"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:text="@{navigationItem.hotelLocation}"
                     android:textSize="@dimen/_10sdp" />
 
                     <RadioButton
-                        android:id="@+id/mRadioButton"
+                        android:id="@+id/mSelectHotel"
                         android:layout_width="wrap_content"
                         android:text="Select Hotel"
-                        android:padding="@dimen/_10sdp"
+                        android:onClick="@{()->clickEvent.onItemHotelSelected(position,navigationItem)}"
+                        android:padding="@dimen/_3sdp"
                         android:elevation="@dimen/_4sdp"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:button="@android:color/transparent"
                         android:background="@drawable/radio_selector"
                         android:textColor="@drawable/radio_text_color"
@@ -85,16 +85,15 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:text="Rooms"
+            android:text="Room"
             android:textSize="@dimen/_12sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_bold"
             android:textColor="@color/black"
             android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/roomListView"
             android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 </layout>

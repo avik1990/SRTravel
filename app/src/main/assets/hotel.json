@@ -1,225 +1,441 @@
 {
-  "hotels": [
-    {
-      "hotelId": 132,
-      "hotelName": "Orchid",
-      "hotelRating": "5 Star",
-      "hotelLocation": "Shimla",
-      "hotelImages": [
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-      ],
-      "rooms": [
-        {
-          "roomId" : 1,
-          "roomName": "Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 2,
-          "roomName": "Couple Special",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 3,
-          "roomName": "Super Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "hotelId": 133,
-      "hotelName": "Taj Bengal",
-      "hotelRating": "5 Star",
-      "hotelLocation": "Shimla",
-      "hotelImages": [
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-      ],
-      "rooms": [
-        {
-          "roomId"  : 4,
-          "roomName": "Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 5,
-          "roomName": "Couple Special",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 6,
-          "roomName": "Super Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "hotelId": 134,
-      "hotelName": "Hyat",
-      "hotelRating": "5 Star",
-      "hotelLocation": "Shimla",
-      "hotelImages": [
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-      ],
-      "rooms": [
-        {
-          "roomId"  : 7,
-          "roomName": "Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 8,
-          "roomName": "Super Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 9,
-          "roomName": "Couple Special",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 10,
-          "roomName": "Super Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom,Candle lit dinner",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 11,
-          "roomName": "Super Deluxe",
-          "roomWithACprice": 1200,
-          "roomWithOutAc": 100,
-          "roomWithDoubleBedPrice": 3000,
-          "roomWithSingleBed": 3000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 12,
-          "roomName": "Super Deluxe",
-          "roomWithACprice": 12010,
-          "roomWithOutAc": 200,
-          "roomWithDoubleBedPrice": 4000,
-          "roomWithSingleBed": 5000,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        },
-        {
-          "roomId"  : 13,
-          "roomName": "Super Deluxe1",
-          "roomWithACprice": 12020,
-          "roomWithOutAc": 1020,
-          "roomWithDoubleBedPrice": 30010,
-          "roomWithSingleBed": 30020,
-          "roomFacility": "Wifi,Housekeeping,Cleaning,Attached Washroom",
-          "roomImages": [
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
-            "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
-          ]
-        }
-      ]
-    }
-  ]
+  "success": 1,
+  "data": {
+    "Hotel": [
+      {
+        "HotelGuid": "7b9ca3c8-cb59-431f-9386-d4cb088af3ah",
+        "HotelName": "Holiday Inn Express",
+        "HotelRooms": [
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          },
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          },
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          }
+        ],
+        "DayPackGuid": "25728a94-4b3b-4f75-bd31-0e8f4eb63f6a",
+        "HotelImages": [
+          {
+            "HotelImages": "hotel.jpg"
+          }
+        ],
+        "HotelRating": "5",
+        "DayHotelGuid": "db668f3d-633f-489a-b0e5-5fb2d6c3a142",
+        "HotelLocation": "Darjeeling"
+      },
+      {
+        "HotelGuid": "7b9ca3c8-cb59-431f-9386-d4cb088af3af",
+        "HotelName": "Holiday Inn Express",
+        "HotelRooms": [
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          }
+        ],
+        "DayPackGuid": "25728a94-4b3b-4f75-bd31-0e8f4eb63f6a",
+        "HotelImages": [
+          {
+            "HotelImages": "hotel.jpg"
+          }
+        ],
+        "HotelRating": "5",
+        "DayHotelGuid": "db668f3d-633f-489a-b0e5-5fb2d6c3a142",
+        "HotelLocation": "Darjeeling"
+      },
+      {
+        "HotelGuid": "7b9ca3c8-cb59-431f-9386-d4cb088af3ak",
+        "HotelName": "Holiday Inn Express",
+        "HotelRooms": [
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          }
+        ],
+        "DayPackGuid": "25728a94-4b3b-4f75-bd31-0e8f4eb63f6a",
+        "HotelImages": [
+          {
+            "HotelImages": "hotel.jpg"
+          }
+        ],
+        "HotelRating": "5",
+        "DayHotelGuid": "db668f3d-633f-489a-b0e5-5fb2d6c3a142",
+        "HotelLocation": "Darjeeling"
+      },
+      {
+        "HotelGuid": "7b9ca3c8-cb59-431f-9386-d4cb088af3al",
+        "HotelName": "Holiday Inn Express",
+        "HotelRooms": [
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          }
+        ],
+        "DayPackGuid": "25728a94-4b3b-4f75-bd31-0e8f4eb63f6a",
+        "HotelImages": [
+          {
+            "HotelImages": "hotel.jpg"
+          }
+        ],
+        "HotelRating": "5",
+        "DayHotelGuid": "db668f3d-633f-489a-b0e5-5fb2d6c3a142",
+        "HotelLocation": "Darjeeling"
+      },
+      {
+        "HotelGuid": "7b9ca3c8-cb59-431f-9386-d4cb088af3am",
+        "HotelName": "Holiday Inn Express",
+        "HotelRooms": [
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          }
+        ],
+        "DayPackGuid": "25728a94-4b3b-4f75-bd31-0e8f4eb63f6a",
+        "HotelImages": [
+          {
+            "HotelImages": "hotel.jpg"
+          }
+        ],
+        "HotelRating": "5",
+        "DayHotelGuid": "db668f3d-633f-489a-b0e5-5fb2d6c3a142",
+        "HotelLocation": "Darjeeling"
+      },
+      {
+        "HotelGuid": "7b9ca3c8-cb59-431f-9386-d4cb088af3an",
+        "HotelName": "Holiday Inn Express",
+        "HotelRooms": [
+          {
+            "HotelRoomGuid": "0189237f-98eb-40e7-935d-d99d1a464e6d",
+            "HotelRoomName": "Deluxe",
+            "RoomFacilities": "Free Wi-Fi,Electric Kettle,TV,Fan,Telephone,Air Condition,Charging Points,Blanket,Toiletries,Towels,Hot & Cold Water,Smoke Alarm",
+            "HotelRoomImages": [
+              {
+                "HotelRoomImages": "H1.jpg"
+              },
+              {
+                "HotelRoomImages": "H2.jpg"
+              },
+              {
+                "HotelRoomImages": "H3.jpg"
+              },
+              {
+                "HotelRoomImages": "H4.jpg"
+              },
+              {
+                "HotelRoomImages": "H11.jpg"
+              },
+              {
+                "HotelRoomImages": "H12.jpg"
+              },
+              {
+                "HotelRoomImages": "H13.jpg"
+              },
+              {
+                "HotelRoomImages": "H14.jpg"
+              },
+              {
+                "HotelRoomImages": "H21.jpg"
+              },
+              {
+                "HotelRoomImages": "H22.jpg"
+              },
+              {
+                "HotelRoomImages": "H23.jpg"
+              },
+              {
+                "HotelRoomImages": "H24.jpg"
+              }
+            ]
+          }
+        ],
+        "DayPackGuid": "25728a94-4b3b-4f75-bd31-0e8f4eb63f6a",
+        "HotelImages": [
+          {
+            "HotelImages": "hotel.jpg"
+          }
+        ],
+        "HotelRating": "5",
+        "DayHotelGuid": "db668f3d-633f-489a-b0e5-5fb2d6c3a142",
+        "HotelLocation": "Darjeeling"
+      }
+    ]
+  }
 }

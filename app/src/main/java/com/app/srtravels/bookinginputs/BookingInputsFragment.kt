@@ -145,8 +145,8 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
                 if(bookingInputs.noOfChilds == 0) {
                     val builder = AlertDialog.Builder(requireContext())
                     builder.setTitle("Confirm!!")
-                    builder.setMessage("Are yo sure there are no person below 12 years of age")
-                    builder.setIcon(android.R.drawable.ic_dialog_alert)
+                    builder.setMessage("Are you sure there are no person below 12 years of age")
+                   // builder.setIcon(android.R.drawable.ic_dialog_alert)
                     builder.setPositiveButton("Yes, I Do have kids"){
                             dialogInterface, which ->
                         //dialog?.dismiss()

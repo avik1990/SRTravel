@@ -1,4 +1,4 @@
-package com.app.srtravels.hotel.adapter
+package com.app.srtravels.tripmapping.module.hotel.adapter
 
 import android.content.Context
 import android.graphics.Color
@@ -15,11 +15,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.R
 import com.app.srtravels.databinding.RowRoomSelectionBinding
-import com.app.srtravels.hotel.model.Room
-import com.app.srtravels.tripmapping.model.HotelRoom
+import com.app.srtravels.tripmapping.module.hotel.model1.HotelRoom
 
-class HotelRoomAdapter(private val context: Context, private val children: List<Room>,
-                       private val interaction: Interaction,private val roomIds: List<Int>) :
+class HotelRoomAdapter(private val context: Context,
+                       private val children: List<HotelRoom>,
+                       private val interaction: Interaction,
+                       private val roomIds: List<String>) :
     RecyclerView.Adapter<HotelRoomAdapter.NavigationOptionViewHolder>() {
 
     var selectedItemPos = -1
@@ -28,18 +29,18 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
 
     private val viewPool = RecyclerView.RecycledViewPool()
 
-    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Room>() {
+    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<HotelRoom>() {
 
         override fun areItemsTheSame(
-            oldItem: Room,
-            newItem: Room
+            oldItem: HotelRoom,
+            newItem: HotelRoom
         ): Boolean {
-            return oldItem.roomName == newItem.roomName
+            return oldItem.HotelRoomGuid == newItem.HotelRoomGuid
         }
 
         override fun areContentsTheSame(
-            oldItem: Room,
-            newItem: Room
+            oldItem: HotelRoom,
+            newItem: HotelRoom
         ): Boolean {
             return oldItem == newItem
         }
@@ -47,11 +48,8 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
 
     private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
 
-    /**
-     * Interface for any kind of listener event in recyclerView
-     * */
     interface Interaction {
-        fun onRoomSelected(position: Int, item: Room)
+        fun onRoomSelected(position: Int, item: HotelRoom)
     }
 
     class NavigationOptionViewHolder(
@@ -73,7 +71,7 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
         return children.size
     }
 
-    fun submitList(list: List<Room>) {
+    fun submitList(list: List<HotelRoom>) {
         differ.submitList(list)
     }
 
@@ -83,14 +81,13 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
         holder.itemDataBindingUtil.clickEvent = interaction
         holder.itemDataBindingUtil.position = position
 
-        Log.e("RoomIds===============",roomIds.toString())
-        if(roomIds.contains(item.roomId)){
+        if(roomIds.contains(item.HotelRoomGuid)) {
             holder.itemDataBindingUtil.mSelectRoom.visibility = View.VISIBLE
         }else{
             holder.itemDataBindingUtil.mSelectRoom.visibility = View.GONE
         }
 
-        val list: List<String> = listOf(*item.roomFacility.split(",").toTypedArray())
+        val list: List<String> = listOf(*item.RoomFacilities.split(",").toTypedArray())
         if(list.isNotEmpty()){
             val buttonLayoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -113,16 +110,18 @@ class HotelRoomAdapter(private val context: Context, private val children: List<
                 holder.itemDataBindingUtil.vContainer.addView(tv)
             }
         }
-
         holder.itemDataBindingUtil.mSelectRoom.setOnCheckedChangeListener(null)
 
         if(position == selectedItemPos) {
             holder.itemDataBindingUtil.mSelectRoom.isChecked = true
-            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.colorAccent)
-        }
-        else {
+            holder.itemDataBindingUtil.container.setBackgroundResource(R.drawable.rounded_selected_blue)
+            holder.itemDataBindingUtil.subContainer.setBackgroundResource(R.color.selected_light_blue)
+            holder.itemDataBindingUtil.mSelectRoom.text = "Room Selected"
+        } else {
             holder.itemDataBindingUtil.mSelectRoom.isChecked = false
-            holder.itemDataBindingUtil.container.setBackgroundResource(R.color.gray)
+            holder.itemDataBindingUtil.container.setBackgroundResource(R.drawable.rounded_grey)
+            holder.itemDataBindingUtil.subContainer.setBackgroundResource(R.color.gray)
+            holder.itemDataBindingUtil.mSelectRoom.text = "Select Room"
         }
 
         holder.itemDataBindingUtil.mSelectRoom.setOnCheckedChangeListener { _, _ ->
