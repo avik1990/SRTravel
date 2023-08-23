@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                     binding.topBar.toolbar.visibility = View.GONE
                 }
                 else -> {
-                    binding.navView.visibility = View.VISIBLE
+                    binding.navView.visibility = View.GONE
                     binding.topBar.toolbar.visibility = View.VISIBLE
                 }
 

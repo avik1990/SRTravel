@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".tripmapping.addroom.AddRoomFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAddRoom"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+   <LinearLayout
+       android:id="@+id/footer"
+       android:layout_width="match_parent"
+       android:layout_alignParentBottom="true"
+       android:orientation="vertical"
+       android:layout_height="wrap_content">
+
+       <TextView
+           android:id="@+id/addAnotherRoom"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/roboto_bold"
+           android:padding="@dimen/_5sdp"
+           android:gravity="center_horizontal"
+           android:text="+ ADD ANOTHER ROOM"
+           android:textColor="@color/black"
+           android:textSize="@dimen/_12sdp" />
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/applyRequiredRooms"
+           android:layout_width="match_parent"
+           android:text="@string/apply"
+           android:layout_marginTop="@dimen/_5sdp"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content">
+       </com.google.android.material.button.MaterialButton>
+   </LinearLayout>
+</RelativeLayout>

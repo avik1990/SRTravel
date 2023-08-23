@@ -68,6 +68,9 @@
         <argument
             android:name="bookinginput"
             app:argType="com.app.srtravels.bookinginputs.model.BookingInputs" />
+        <action
+            android:id="@+id/action_tripMappingFragment_to_addRoomFragment"
+            app:destination="@id/addRoomFragment" />
     </fragment>
     <fragment
         android:id="@+id/hotelFragment"
@@ -78,7 +81,9 @@
             android:name="hotelGuid"
             app:argType="string" />
     </fragment>
-
-
-
+    <fragment
+        android:id="@+id/addRoomFragment"
+        android:name="com.app.srtravels.tripmapping.addroom.AddRoomFragment"
+        android:label="fragment_add_room"
+        tools:layout="@layout/fragment_add_room" />
 </navigation>

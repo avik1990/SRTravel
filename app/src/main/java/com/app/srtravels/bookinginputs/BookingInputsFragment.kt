@@ -188,7 +188,6 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
                     }
                 }
             }
-
             override fun onNothingSelected(p0: AdapterView<*>?) {
             }
         }
@@ -200,15 +199,12 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
         for (i in 0 until spNoOfChild) {
             childList.add((i+1).toString())
         }
-
         val adapter: ArrayAdapter<String> =
             ArrayAdapter<String>(requireContext(), R.layout.spinner_list, childList)
         binding.spnChild.adapter = adapter
-
         binding.spnChild.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-
                 if(p2!= 0) {
                     selectedNoofChild = binding.spnChild.selectedItem.toString().toInt()
                     binding.linearPolicyview.visibility =View.VISIBLE

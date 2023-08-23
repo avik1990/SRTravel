@@ -59,4 +59,5 @@
     <string name="pck_price">Starting Price \u20B9</string>
     <string name="room_facilities">Room Facilities</string>
     <string name="trips">Trips</string>
+    <string name="apply">Apply</string>
 </resources>
