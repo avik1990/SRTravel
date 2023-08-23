@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -12,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.app.srtravels.MainActivity
-import com.app.srtravels.bookinginputs.BookingInputsFragment
+import com.app.srtravels.R
 import com.app.srtravels.bookinginputs.model.BookingInputs
 import com.app.srtravels.databinding.FragmentTripMappingBinding
 import com.app.srtravels.horizotalcalender.adapter.CalanderAdapter
@@ -27,8 +28,9 @@ import com.app.srtravels.tripmapping.model.ImageModel
 import com.app.srtravels.util.IMAGE_PATH_URL
 import com.app.srtravels.util.MAX_ADULT_PERSON_PER_ROOM
 import com.app.srtravels.util.getFormattedDate_YYYYMMDD
-
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderAdapter.Interaction ,TripImageAdapter.Interaction {
@@ -67,6 +69,10 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
         }
     }
 
+    fun receiveData(data: String) {
+        Toast.makeText(requireContext(),data,Toast.LENGTH_SHORT).show()
+    }
+
     override fun onCreateView (inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentTripMappingBinding.inflate(inflater, container, false)
         return binding.root
@@ -78,9 +84,15 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
         viewModel.getTripPackageMappingData()
 
         _binding?.tvModifyRomms?.setOnClickListener {
-            val action = TripMappingFragmentDirections.actionTripMappingFragmentToAddRoomFragment()
-            findNavController().navigate(action)
+            /*val action = TripMappingFragmentDirections.actionTripMappingFragmentToAddRoomFragment()
+            findNavController().navigate(action)*/
+            val fragmentA = AddRoomFragment()
+            val transaction = childFragmentManager?.beginTransaction()
+            transaction?.replace(R.id.container, fragmentA, "fragment_a_tag")
+            transaction?.addToBackStack(null)
+            transaction?.commit()
         }
+
         ////for Calender
         viewModel.generateCalenderDates(getFormattedDate_YYYYMMDD(startDate) ,6)
         viewModel._calenderMutableData.observe(requireActivity()) { it ->
@@ -95,9 +107,9 @@ class TripMappingFragment : Fragment(), HeaderDayAdapter.Interaction , CalanderA
     }
 
     fun getRoomInputData(dataList: List<RoomInputModel>) {
-
-
-
+        var gson = Gson()
+        var mMineUserEntity = gson.toJson(dataList)
+        Log.e("RecieveData1234" , mMineUserEntity)
     }
 
     private fun prepareMovieContentData(dataList: List<Day>) {

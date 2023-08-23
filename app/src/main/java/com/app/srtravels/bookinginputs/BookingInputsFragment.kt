@@ -155,7 +155,7 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
                         dialog?.dismiss()
                         bookingInputs.let {
                          val direction = TripFragmentDetailsDirections.actionTripFragmentDetailsToTripMappingFragment(bookingInputs)
-                            findNavController().navigate(direction)
+                         findNavController().navigate(direction)
                         }
                     }
                     val alertDialog: AlertDialog = builder.create()

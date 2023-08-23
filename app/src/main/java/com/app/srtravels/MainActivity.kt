@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    public lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var navGraph: NavGraph
     private lateinit var navController: NavController
@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
         val navView: BottomNavigationView = binding.navView
         navView.setupWithNavController(navController)
-
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
 
@@ -55,27 +54,23 @@ class MainActivity : AppCompatActivity() {
                     binding.navView.visibility = View.GONE
                     binding.topBar.toolbar.visibility = View.VISIBLE
                 }
-
             }
         }
-
-        showBottomNavigationBar()
+        //showBottomNavigationBar()
         setNavigationGraph()
     }
 
-    private fun showBottomNavigationBar() {
+    /*private fun showBottomNavigationBar() {
         //if(navHostFragment)
-    }
+    }*/
 
     private fun setNavigationGraph() {
         navGraph.setStartDestination(R.id.loginFragment)
         navController.graph = navGraph
     }
 
-    fun getCurrentFragment(): androidx.fragment.app.Fragment? {
+    /*fun getCurrentFragment(): androidx.fragment.app.Fragment? {
         return supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment_content_main)
-    }
-
-
+    }*/
 }

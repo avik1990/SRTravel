@@ -6,11 +6,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.srtravels.MainActivity
 import com.app.srtravels.R
 import com.app.srtravels.databinding.FragmentAddRoomBinding
+import com.app.srtravels.home.modules.trip.model.Trip
+import com.app.srtravels.tripmapping.TripMappingFragment
 import com.app.srtravels.tripmapping.addroom.adapter.AddRoomAdapter
 import com.app.srtravels.tripmapping.addroom.model.RoomInputModel
 import com.app.srtravels.util.MAX_ADULT_PERSON_PER_ROOM
@@ -18,7 +21,7 @@ import com.app.srtravels.util.MAX_PERSON_PER_TRIP
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.gson.Gson
 
-class AddRoomFragment : BottomSheetDialogFragment() ,AddRoomAdapter.Interaction {
+class AddRoomFragment : Fragment() ,AddRoomAdapter.Interaction {
 
     companion object {
         fun newInstance() = AddRoomFragment()
@@ -49,13 +52,15 @@ class AddRoomFragment : BottomSheetDialogFragment() ,AddRoomAdapter.Interaction 
         inflateAddRoomItem()
         _binding?.addAnotherRoom?.setOnClickListener {
             if(roomInputModelList.size <= Math.round((MAX_PERSON_PER_TRIP / 4).toDouble())) {
-                val roomInputs = RoomInputModel().apply {
-                    id = System.currentTimeMillis()
-                    roomName = ""
-                    noOfAdults = 1
-                    noOfChild = 0
-                    childAgeList = selectChildAge
-                }
+                val roomInputs = RoomInputModel().copy(id = System.currentTimeMillis(),
+                    isSelected= true,noOfAdults = 1,noOfChild = 0,childAgeList = selectChildAge)
+               /* id = System.currentTimeMillis()
+                roomName = ""
+                noOfAdults = 1
+                noOfChild = 0
+                childAgeList = selectChildAge*/
+
+
                 roomInputModelList.add(roomInputs)
                 roomadapter.submitList(roomInputModelList)
                 roomadapter.notifyDataSetChanged()
@@ -63,21 +68,27 @@ class AddRoomFragment : BottomSheetDialogFragment() ,AddRoomAdapter.Interaction 
         }
 
         _binding?.applyRequiredRooms?.setOnClickListener {
-            var gson = Gson()
-            var mMineUserEntity = gson.toJson(roomInputModelList)
-
-            Log.e("JSONVALUES", mMineUserEntity)
+            //var gson = Gson()
+            //var mMineUserEntity = gson.toJson(roomInputModelList)
+            (parentFragment as TripMappingFragment).getRoomInputData(roomInputModelList)
+            //tripMappingFragment = parentFragmentManager.findFragmentByTag("fragment_a_tag") as TripMappingFragment
+            //tripMappingFragment.receiveData(mMineUserEntity)
+            //getActivity()?.getFragmentManager()?.beginTransaction()?.remove(this).commit();
+            parentFragmentManager.popBackStack()
         }
     }
 
     private fun inflateAddRoomItem() {
-        val roomInputs = RoomInputModel().apply {
+        /*val roomInputs = RoomInputModel().apply {
             id =  System.currentTimeMillis()
             roomName = ""
             noOfAdults= 2
             noOfChild = 0
             childAgeList = selectChildAge
-        }
+        }*/
+
+        val roomInputs = RoomInputModel().copy(id = System.currentTimeMillis(),
+            isSelected= true,noOfAdults = 2,noOfChild = 0,childAgeList = selectChildAge)
 
         roomInputModelList.add(roomInputs)
         roomadapter = AddRoomAdapter( this)
