@@ -207,8 +207,8 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 if(p2!= 0) {
                     selectedNoofChild = binding.spnChild.selectedItem.toString().toInt()
-                    binding.linearPolicyview.visibility =View.VISIBLE
-                    generateChildAgeView(p2)
+                    binding.linearPolicyview.visibility = View.VISIBLE
+                   // generateChildAgeView(p2)
                 }else{
                     selectChildAge.clear()
                     selectedNoofChild = 0
@@ -221,6 +221,7 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
         }
     }
 
+/*
     private fun generateChildAgeView(count:Int) {
         binding.parentChildAgeView.removeAllViews()
         selectChildAge.clear()
@@ -264,4 +265,5 @@ class BookingInputsFragment(trip: Trip?) : BottomSheetDialogFragment() {
             binding.parentChildAgeView.addView(view)
         }
     }
+*/
 }

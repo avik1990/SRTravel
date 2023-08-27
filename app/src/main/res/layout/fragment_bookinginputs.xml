@@ -1,75 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardMaxElevation="5dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_bottom_sheet_background"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
-        android:layout_height="wrap_content"
         tools:context=".bookinginputs.BookingInputsFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_5sdp"
-            android:orientation="vertical"
-            android:background="@color/white">
-
+            android:background="@color/white"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_13sdp"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Few more steps to be there!!"
-                android:layout_height="wrap_content"/>
-
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:weightSum="2"
-                android:layout_height="wrap_content">
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <TextView
                     android:layout_width="0dp"
-                    android:hint="Starting From"
-                    android:textSize="@dimen/_10sdp"
-                    android:padding="@dimen/_12sdp"
-                    android:fontFamily="@font/roboto_regular"
-
-                    android:textColor="@color/black"
-                    android:drawableRight="@drawable/baseline_location_on_24"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:layout_height="wrap_content"/>
+                    android:drawableRight="@drawable/baseline_location_on_24"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="Starting From"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
                 <TextView
                     android:layout_width="0dp"
-                    android:text="Travelling To"
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="@color/black"
-                    android:visibility="gone"
-                    android:padding="@dimen/_12sdp"
-                    android:drawableRight="@drawable/baseline_location_on_24"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+                    android:drawableRight="@drawable/baseline_location_on_24"
+                    android:padding="@dimen/_12sdp"
+                    android:text="Travelling To"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_height="wrap_content">
+                android:weightSum="2">
 
                 <TextView
                     android:id="@+id/startDate"
@@ -86,115 +83,116 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_height="wrap_content">
+                android:weightSum="2">
 
                 <TextView
                     android:layout_width="0dp"
-                    android:text="Adults(Above 12 yrs)"
-                    android:padding="@dimen/_12sdp"
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+                    android:padding="@dimen/_12sdp"
+                    android:text="Adults(Above 12 yrs)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
 
                 <Spinner
                     android:id="@+id/spnAdult"
                     android:layout_width="0dp"
-                    android:padding="@dimen/_12sdp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:spinnerMode="dropdown"
-                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:padding="@dimen/_12sdp"
                     android:popupBackground="@color/white"
-                    android:layout_height="wrap_content"/>
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/childView"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_height="wrap_content">
+                android:weightSum="2">
 
                 <TextView
                     android:layout_width="0dp"
-                    android:text="Child(Below 12 yrs)"
-                    android:padding="@dimen/_12sdp"
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+                    android:padding="@dimen/_12sdp"
+                    android:text="Child(Below 12 yrs)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
 
                 <Spinner
                     android:id="@+id/spnChild"
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:padding="@dimen/_12sdp"
                     android:textColor="@color/black"
-                    android:layout_weight="1"
-                    android:theme="@style/ThemeOverlay.AppCompat.Light"
-                    android:layout_height="wrap_content"/>
+                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="*Max 14 individuals allowed including child."
                     android:textColor="@color/red"
-                    android:textSize="@dimen/_7sdp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="@dimen/_7sdp" />
 
                 <LinearLayout
                     android:id="@+id/linearPolicyview"
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:visibility="gone"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="Select child's age as on the last day of travel"
-                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_regular"
-                        android:layout_height="wrap_content"/>
+                        android:text="Select child's age as on the last day of travel"
+                        android:textColor="@color/black" />
 
                     <LinearLayout
                         android:id="@+id/parentChildAgeView"
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_height="wrap_content"/>
+                        android:orientation="vertical" />
 
                     <TextView
                         android:id="@+id/tvChildPolicy"
                         android:layout_width="wrap_content"
-                        android:text="*Child Policies"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto_regular"
                         android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="*Child Policies"
                         android:textColor="@color/red"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
+
             <Button
                 android:id="@+id/btnNext"
                 android:layout_width="match_parent"
-                android:text="Tour Plan"
-                android:textColor="@color/white"
-                android:textAllCaps="false"
-                android:fontFamily="@font/roboto_regular"
-                android:background="@drawable/button_background_blue"
+                android:layout_height="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:layout_height="@dimen/_25sdp"/>
+                android:background="@drawable/button_background_blue"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Tour Plan"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.core.widget.NestedScrollView>

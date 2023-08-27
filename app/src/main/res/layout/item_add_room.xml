@@ -206,6 +206,19 @@
                         android:textSize="@dimen/_20sdp" />
                 </LinearLayout>
             </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/parentChildAgeView"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/childList"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>
