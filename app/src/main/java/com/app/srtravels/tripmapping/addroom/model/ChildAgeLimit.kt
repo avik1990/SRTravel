@@ -1,9 +1,10 @@
 package com.app.srtravels.tripmapping.addroom.model
 
-import androidx.room.Ignore
+import com.app.srtravels.util.MAX_CHILD_AGE_LIMIT
+import com.google.gson.annotations.Expose
 
 data class ChildAgeLimit(
-    var childId: Long = 0,
-    var childAgeList: MutableList<Int> = mutableListOf(),
-    var selectedChildAgeList: Int = -1,
-    var isSelected: Boolean = false)
+    var childAgeList: MutableList<Int>? = (1..MAX_CHILD_AGE_LIMIT).toMutableList(),
+    @Expose
+    var selectedChildAge: Int = -1
+)

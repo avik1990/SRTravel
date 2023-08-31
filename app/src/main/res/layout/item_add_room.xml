@@ -16,7 +16,7 @@
 
         <variable
             name="clickEvent"
-            type="com.app.srtravels.tripmapping.addroom.adapter.AddRoomAdapter.Interaction" />
+            type="com.app.srtravels.tripmapping.addroom.adapter.AddRoomAdapter.AddRoomAdapterInteraction" />
     </data>
 
     <androidx.cardview.widget.CardView

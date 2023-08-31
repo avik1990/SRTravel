@@ -16,7 +16,7 @@
 
         <variable
             name="clickEvent"
-            type="com.app.srtravels.tripmapping.addroom.adapter.ChildAgeAdapter.Interaction" />
+            type="com.app.srtravels.tripmapping.addroom.adapter.ChildAgeAdapter.ChildAgeAdapterInteraction" />
     </data>
 
 <LinearLayout
@@ -36,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:scrollbars="none"
+        android:visibility="gone"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -51,7 +52,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/childAgeList"
         android:layout_width="match_parent"
-        android:visibility="gone"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_height="wrap_content"/>
 
